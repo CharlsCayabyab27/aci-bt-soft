@@ -44,8 +44,8 @@
            <p>
             THIS IS TO CERTIFY THAT the business trade activity described below:</p>
             <div class="center">
-				<h1> <u>[BNAME]
-                </u></h1>
+				<h1> <p  id="output1" >[BNAME]
+                </p></h1>
                 <b><h4 style="margin-top: -4%;">BUSINESS NAME / TRADE ACTIVITY
                 </h4></b>
 
@@ -78,7 +78,7 @@
             <p class="indent">Recommends only the issuance of a “Temporary Mayor’s permit for three (3) months and within the period, requirements under existing Barangay ordinances, rules, and regulations on that matter should be totally complied with otherwise this Barangay would take necessary action, within legal bound, to stop its operation.”
             </p>
 <br><br>
-                <b>Issued this  [DAY]  day of [MONTH]  [YEAR] . </b>
+                <b>Issued this <di >[DAY]</di>   day of [MONTH]  [YEAR] . </b>
 		</div>
 		
 		
@@ -165,5 +165,13 @@
     		<img src="logo/border.png"  class="border" alt="">
 			<img src="logo/under.png" class="footer-b" alt="">
 	</div>
+    <script>
+        window.addEventListener('message', function(event) {
+            var data = event.data;
+            document.getElementById("output1").innerText = data.input1 || '';
+            document.getElementById("output2").innerText = data.input1 || '';
+            document.getElementById("output3").innerText = data.input2 || '';
+        });
+    </script>
 </body>
 </html>
