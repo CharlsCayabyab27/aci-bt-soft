@@ -61,6 +61,20 @@
             Issued this <span id="day"></span> day <span=month></span=month> <span id="year"></span>.. <br></div>
            
            
+    <script>
+        window.addEventListener('message', function(event) {
+            var data = event.data;
+            document.getElementById("name").innerText = data.lotFullName || '';
+            document.getElementById("purok").innerText = data.lotAddress || '';
+            document.getElementById("lot").innerText = data.lotNumber || '';
+            document.getElementById("inum").innerText = data.lotAreaNumerical || '';
+            document.getElementById("purok").innerText = data.lotLocationAddress || '';
+            // document.getElementById("lotIssuedDate").innerText = data. || '';
+            // document.getElementById("").innerText = data. || '';
+            // document.getElementById("").innerText = data. || '';
+            // document.getElementById("").innerText = data. || '';
+        });
+    </script>
            
            <!-- brrgy officials -->
            <div class="names"><div class="center"><h3>BARANGAY OFFICIAL</h3></div>
@@ -147,12 +161,4 @@
     <p id="output2"></p>
     <p id="output3"></p>
 
-    <script>
-        window.addEventListener('message', function(event) {
-            var data = event.data;
-            document.getElementById("output1").innerText = data.input1 || '';
-            document.getElementById("output2").innerText = data.input2 || '';
-            document.getElementById("output3").innerText = data.input3 || '';
-        });
-    </script>
 </html>

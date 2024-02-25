@@ -59,7 +59,14 @@
 
                         <div class="indent">Given this <span id="DAY"></span> </b> <span id="MONTH"></span> <span id="YEAR"></span> .</div>
 
-
+                        <script>
+                            window.addEventListener('message', function(event) {
+                                var data = event.data;
+                                document.getElementById("indigencyFullName").innerText = data.input1 || '';
+                                document.getElementById("output2").innerText = data.input1 || '';
+                                document.getElementById("output3").innerText = data.input2 || '';
+                            });
+                        </script>
 		
 		</div>
 		
@@ -149,13 +156,6 @@
 			<img src="logo/under.png" class="footer-b" alt="">
 	</div>
     
-    <script>
-        window.addEventListener('message', function(event) {
-            var data = event.data;
-            document.getElementById("output1").innerText = data.input1 || '';
-            document.getElementById("output2").innerText = data.input1 || '';
-            document.getElementById("output3").innerText = data.input2 || '';
-        });
-    </script>
+    
 </body>
 </html>
