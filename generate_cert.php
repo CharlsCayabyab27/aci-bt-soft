@@ -237,7 +237,7 @@
             document.getElementById('DeathCertificate').style.display = 'none';
             document.getElementById('Indigency').style.display = 'block';
             
-            iframe.src = 'aci-bt-soft/certificates/br.html';
+            iframe.src = 'certificates/br.html';
             break;
         case 'DeathCertificate':
             document.getElementById('CertificateOfCohabitation').style.display = 'none';
@@ -248,7 +248,7 @@
             document.getElementById('LotOwnership').style.display = 'none';
             document.getElementById('DeathCertificate').style.display = 'block';
             document.getElementById('Indigency').style.display = 'none';
-            iframe.src = 'aci-bt-soft/certificates/death_cert.html';
+            iframe.src = 'certificates/death_cert.html';
             break;
         case 'LotOwnership':
             document.getElementById('CertificateOfCohabitation').style.display = 'none';
@@ -259,7 +259,7 @@
             document.getElementById('LotOwnership').style.display = 'block';
             document.getElementById('DeathCertificate').style.display = 'none';
             document.getElementById('Indigency').style.display = 'none';
-            iframe.src = 'aci-bt-soft/certificates/lot.html';
+            iframe.src = 'certificates/lot.html';
             break;
         case 'BarangayBusinessPermitnew':
             document.getElementById('CertificateOfCohabitation').style.display = 'none';
@@ -270,7 +270,7 @@
             document.getElementById('LotOwnership').style.display = 'none';
             document.getElementById('DeathCertificate').style.display = 'none';
             document.getElementById('Indigency').style.display = 'none';
-            iframe.src = 'aci-bt-soft/certificates/br.html';
+            iframe.src = 'certificates/br.html';
             
             break;
         case 'BarangayBusinessPermitrenew':
@@ -282,7 +282,7 @@
             document.getElementById('LotOwnership').style.display = 'none';
             document.getElementById('DeathCertificate').style.display = 'none';
             document.getElementById('Indigency').style.display = 'none';
-            iframe.src = 'aci-bt-soft/certificates/bn.html';
+            iframe.src = 'certificates/bn.html';
             break;
         case 'BarangayCertification':
             document.getElementById('CertificateOfCohabitation').style.display = 'none';
@@ -293,7 +293,7 @@
             document.getElementById('LotOwnership').style.display = 'none';
             document.getElementById('DeathCertificate').style.display = 'none';
             document.getElementById('Indigency').style.display = 'none';
-            iframe.src = 'aci-bt-soft/certificates/certification.html';
+            iframe.src = 'certificates/certification.html';
             break;
         case 'Oathtaking':
             document.getElementById('CertificateOfCohabitation').style.display = 'none';
@@ -304,7 +304,7 @@
             document.getElementById('LotOwnership').style.display = 'none';
             document.getElementById('DeathCertificate').style.display = 'none';
             document.getElementById('Indigency').style.display = 'none';
-            iframe.src = 'aci-bt-soft/certificates/.html';
+            iframe.src = 'certificates/.html';
             break;
         case 'CertificateOfCohabitation':
             document.getElementById('CertificateOfCohabitation').style.display = 'block';
@@ -315,7 +315,7 @@
             document.getElementById('LotOwnership').style.display = 'none';
             document.getElementById('DeathCertificate').style.display = 'none';
             document.getElementById('Indigency').style.display = 'none';
-            iframe.src = 'aci-bt-soft/certificates/.html';
+            iframe.src = 'certificates/.html';
             break;
         default:
 
