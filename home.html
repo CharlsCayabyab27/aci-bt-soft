@@ -1,0 +1,190 @@
+<!--
+=========================================================
+* Paper Dashboard 2 - v2.0.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/paper-dashboard-2
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Para sa Soft Eng
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="./assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<style>
+  p {
+    color: white;
+    font-size: 12px;
+  }
+</style>
+
+<body style="background-color: #F4F3EF;">
+  <div class="wrapper">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+      <div class="logo" style="background-color: #729ED9;">
+        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+          <div class="logo-image-big" style="padding: 25px;">
+            <img src="./assets/img/cap-log.png">
+          </div>
+        </a>
+      </div>
+      <div class="sidebar-wrapper" style="background-color: #174793;">
+        <ul class="nav">
+          <li class="active ">
+            <a href="home.html">
+              <i class="nc-icon nc-world-2"></i>
+              <p class="text">Home</p>
+            </a>
+          </li>
+          <li>
+            <a href=";">
+              <i class="nc-icon nc-circle-10"></i>
+              <p class="text">Officials</p>
+            </a>
+          </li>
+          <li>
+            <a href=";">
+              <i class="nc-icon nc-bell-55"></i>
+              <p class="text">About</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel" style="height: 100vh;">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent" style="border: none;">
+        <div class="container-fluid" style="border-bottom: 1px solid rgba(26, 25, 19, 0.192);">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:;">Automated Credential Issuance: Barangay Tiniguiban</a>
+          </div>
+          <div class="navbar-wrapper">
+            <a href="login.html"><button type="submit" class="btn btn-round"
+              style="width: 100px; background-color: #729ED9;">Logout</button></a>
+          </div>
+        </div>
+      </nav>
+
+      <style>
+        .card {
+          height: 350px;
+          width: 350px;
+          transition: transform 0.3s;
+          font-size: 18px;
+          font-weight: 400;
+          border-bottom: 2px solid black;
+        }
+
+        .card:hover {
+          transform: scale(1.1);
+          background-color: rgb(255, 230, 91);
+        }
+      </style>
+
+      <div class="content">
+        <div class="row" style="border-radius: 20px; padding-top: 50px;">
+          <div class="col-md-12" style="padding: 0 45px;">
+            <div class="welcome-card d-flex align-items-center justify-content-between">
+              <h3>Welcome, User</h3>
+              <h5 class="">12/02/2024 10:59am</h5>
+            </div>
+          </div>
+
+          <div class="col-md-12 d-flex align-items-center justify-content-around" style="height: 450px;">
+            <form action="gen_docs.html" class="row">
+              <div class="col-md-12">
+                <button class="card">
+                  <div class="card-header">
+                    <h5 class="card-title"></h5>
+                  </div>
+                  <div class="card-body ">
+                    <img height="180" width="220" src="./assets/img/certs.png" alt="">
+                  </div>
+                  <div class="card-footer">
+                    <hr>
+                    <div class="stats">
+                      <i class="fa"></i> Generate Documents
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </form>
+
+            <form action="view_trans.html" class="row">
+              <div class="col-md-12">
+                <button class="card">
+                  <div class="card-header ">
+                    <h5 class="card-title"></h5>
+                  </div>
+                  <div class="card-body ">
+                    <img height="180" width="220" src="./assets/img/list.png" alt="">
+                  </div>
+                  <div class="card-footer ">
+                    <hr>
+                    <div class="stats">
+                      <i class="fa"></i> View Transactions
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </form>
+
+            <form action="view_reports.html" class="row">
+              <div class="col-md-12">
+                <button class="card">
+                  <div class="card-header ">
+                  </div>
+                  <div class="card-body">
+                    <img height="180" width="220" src="./assets/img/reports.png" alt="">
+                  </div>
+                  <div class="card-footer ">
+                    <hr>
+                    <div class="stats">
+                      <i class="fa"></i> View Reports
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./assets/js/core/jquery.min.js"></script>
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="./assets/js/plugins/chartjs.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+</body>
+
+</html>
