@@ -37,7 +37,7 @@ Coded by www.creative-tim.com
 
 <style>
     body {
-        background-image: url(./assets/img/best_cap2.jpg);
+        background-image: url(./assets/img/best_cap.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: contain;
@@ -45,7 +45,8 @@ Coded by www.creative-tim.com
     }
 </style>
 
-<body class="d-flex align-items-center justify-content-center" style="height: 100vh; width: 100%; background-color: #F4F3EF;">
+<body class="d-flex align-items-center justify-content-center"
+    style="height: 100vh; width: 100%; background-color: #F4F3EF;">
     <div class="content" style="width: 28%; border-radius: 10px; margin-left: 1000px;">
         <div class="card card-user">
             <div class="image">
@@ -61,14 +62,21 @@ Coded by www.creative-tim.com
                     <div class="row d-flex flex-column">
                         <div class="col-md-12 px-1">
                             <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" placeholder="Enter Username" value="">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">@</span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                        placeholder="Username">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-12 px-1">
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" placeholder="Enter Password">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="inputGroup-sizing-default"><i
+                                            class="nc-icon nc-lock-circle-open"></i></span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                        placeholder="Password">
+                                </div>
                             </div>
                         </div>
                     </div>
