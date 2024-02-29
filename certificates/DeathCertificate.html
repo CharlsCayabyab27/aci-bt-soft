@@ -5,52 +5,85 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="logo.css">
 <style>
-    
+   
+
+
     .content {
         font-family: Calibri;
         font-size: 17px;
         position: absolute; 
         top: 25%;
         left: 30%;
-		width: 65%
+		width: 70%
     }
+
+    
     .capitan {
         position: absolute;
-        left: 70%;
-        top: 70%;
+        left: 80%;
+        top: 60%;
     }
-	
+    
 </style>
 </head>
 <body>
     <div class="container">
-            <div class="header">
-                <img src="logo/logo brgy.jpg" class="brlogo" alt="">
-                <img src="logo/citylogo.jpg" class="ctlogo" alt="">
-                <div class="family"><b ><p >REPUBLIC OF THE PHILIPPINES</p>
-                                    <h1 style="margin-top: -20px; color:#00528d;">BARANGAY TINIGUIBAN</h1>
-                                    <p style="margin-top: -20px;">PUERTO PRINCESA CITY, PALAWAN</p></b>
-            </div></div>
+        <div class="header">
+            <img src="logo/logo brgy.jpg" class="brlogo" alt="">
+            <img src="logo/citylogo.jpg" class="ctlogo" alt="">
+            <div class="family"><b ><p >REPUBLIC OF THE PHILIPPINES</p>
+                                <h1 style="margin-top: -20px; color:#00528d;">BARANGAY TINIGUIBAN</h1>
+                                <p style="margin-top: -20px;">PUERTO PRINCESA CITY, PALAWAN</p></b>
+        </div></div>
         <img class="watermark" src="logo/water.png" alt="">
         <div class="content">
 			<div class="center">
-				<h2> CERTIFICATION</h2>
+        <h1>OFFICE OF  THE PUNONG BARANGAY</h1>
+				<h2>DEATH CERTIFICATION</h2>
 			</div>
 
-            <p>To whom it may concern:
-				</p>
-                <p class="indent"><b>THIS IS TO CERTIFY</b> that <b  id="name"></b>, born on <span id="Birthday"></span>  and <b id="name2"></b>, born on <span id="Birthday2"></span> , have been living as a spouses in good faith and talking on all of the task and responsibilities that follow with being in the said relationship, cohabiting in the same household at Purok <span id="purok"></span> , Barangay Tiniguiban, 
-                    Puerto Princesa City,Palawan and both holding themselves out to the community as spouses since <span id="month2"></span> <span id="year2"></span> (<span id="inyear"></span> years).
-			</p>
+				<span>TO WHOM IT MAY CONCERN:</span>
+				<br><br>
 
-            <p class="indent">This certification is issued upon the request of the above named person for whatever legal purposes.
-            </p>
-            <p class="indent">Given this <span id="day"></span> day of <span id="month"></span> <span id="year"></span> at Barangay Tiniguiban, Puerto Princesa City,Palawan.
+        <p class="paragraph-content">THIS IS TO CERTIFY that, <span id="name"></span>, <span id="age"></span>, is a resident of <span id="purok"></span>, Barangay Tiniguiban, Puerto Princesa City, was died last 
+            <span id="dateofdeath"></span> at about <span id="timeofdate"></span>. Cause of Death <strong id="causeofdeath"></strong>.</p>
 
-		
+        <p class="paragraph-content">This certification is being issued upon the request of <strong id="name2"></strong> <span id="relation"></span> for <strong>BURIAL ASSISTANCE</strong>.
+        </p>
+
+        <p class="paragraph-content">Given this <span id="day"></span><sup id="sup"></sup> day of <span id="month"></span> <span id="year"></span>.</p>, at Barangay Tiniguiban, Puerto Princesa City, Palawan.
+        </p>
+
+        <div class="captain-signature">
+            <span>RAYMUNDO B. RAMOS</span> <br>
+            <small style="line-height: 1em;">Barangay Kagawad</small> <br>
+            <small>Duty Kagawad</small>
+        </div>
 		</div>
+ 
 		
-		
+		 <script src="../assets/js/main.js" ></script>
+        <script >
+            
+            window.addEventListener('message', function(event) {
+                var data = event.data;
+                document.getElementById("name").innerText = data.deathFullName || '';
+                document.getElementById("age").innerText = data.deathAge || '';
+                document.getElementById("purok").innerText = data.deathAddress || '';
+                document.getElementById("dateofdeath").innerText = data.dateOfDeath || '';
+                // document.getElementById("timeofdeath").innerText = data.timeOfDeath || '';
+                document.getElementById("causeofdeath").innerText = data.causeOfDeath || '';
+                document.getElementById("name2").innerText = data.requestingFullName || '';
+                document.getElementById("relation").innerText = data.relationshipToDeadPerson || '';
+                const dateInput = data.dateRequested;
+                var date = new Date(dateInput);
+                document.getElementById("day").innerText = date.toLocaleDateString('en-US',{day: 'numeric'}) || '';
+                document.getElementById("month").innerText = date.toLocaleDateString('en-US',{month: 'long'}) || '';
+                document.getElementById("year").innerText = date.toLocaleDateString('en-US',{year: 'numeric'}) || '';
+                document.getElementById("sup").innerText = getOrdinalSuffix(date.toLocaleDateString('en-US',{day: 'numeric'})) || '';
+            }); 
+            // 
+0        </script>
 		
             <div class="names"><div class="center"><h3>BARANGAY OFFICIAL</h3></div>
                 
@@ -127,15 +160,9 @@
                 </div>	
             </div>
             <div class="cp"><h5>“Serbisyong Tapat, tungo sa magandang bukas,<b> BANGON TINIGUIBAN</b>”</h5></div>
-            <div class="capitan center">
-				<b><h4>DAVID V. PACAÑOT</h4></b> <div style="margin-top: -20px;">Punong Barangay</div><br><br><br><br>
-			<b>ELMER D. BONBON</b>
-            <p style="margin-top: -2px;">
-				Barangay Kagawad <br>
-			   Duty Officer</p>
-</div>
     		<img src="logo/border.png"  class="border" alt="">
 			<img src="logo/under.png" class="footer-b" alt="">
 	</div>
+    
 </body>
 </html>
