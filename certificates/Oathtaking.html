@@ -74,7 +74,7 @@
         </div>
             <br> 
 
-            <p class="text-content">I, <strong id="name">JENNY V. LASALA</strong id= "age"   >23 years of age, resident of 3(years/months), availing the benefit of Republic Act 11261, otherwise known as the First Time Job-seeker Act of 2019, do hereby declare, agree and undertake to abide and be found by the following: </p>
+            <p class="text-content">I, <strong id="applicantFullName">JENNY V. LASALA</strong> <strong id= "applicantAge"></strong> years of age, resident of <span id="applicantResidencyPeriod"></span>(years/months), availing the benefit of Republic Act 11261, otherwise known as the First Time Job-seeker Act of 2019, do hereby declare, agree and undertake to abide and be found by the following: </p>
 
             <ol>
               <li>That this is the first time that I will actively look for a job , and therefore requesting that a Barangay Certification be issued in my favor to avail the benefits of the law;</li>
@@ -93,10 +93,13 @@
               </li>
               <li>That I consent to the use of my personal information pursuant to the Data Privacy Act and other applicable laws, rules and regulations;</li>
             </ol>
+            
+          
+       
 
             <p class="text-content">Signed this <span id="day"></span>   day of <span id="month"></span> <span id="year"></span>, in the City/Municipality of Puerto Princesa.
             </p>
-
+            
             <div class="signatures-container">
               <div class="signature">
                 <span><strong>JENNY V. LASALA</strong></span><br>
@@ -111,20 +114,41 @@
           <span>For applicants at least fifteen years old to less than 18 years of age:
           </span> <br>
 
-          <p class="text-content" >  <u>I, <span id="name"></span></u>,  <span id="year"></span> years of age ,parent /guardian of <u id="gname"> </u>, and a resident of Purok <span id="purok"></span>  for <span id="num"></span>(year/months), do hereby give my consent for my child/dependent to avail the benefits of Republic Act 11261 and be bound by the above-mentioned conditions.
+          <p class="text-content" >  <u>I, <span id="guardianFullName"></span></u>,  <span id="guardianAge"></span> years of age ,parent /guardian of <u id="gname"> </u>, and a resident of Purok <span id="applicantAddress"></span>  for <span id="num"></span>(year/months), do hereby give my consent for my child/dependent to avail the benefits of Republic Act 11261 and be bound by the above-mentioned conditions.
           </p>  
 
 
           <span>Signed by:</span> <br> <br>
 
           <div class="left-signature">
-            <span><strong>GERTRUDES V. LASALA</strong></span><br>
+            <span><strong id="guardianFullName">GERTRUDES V. LASALA</strong></span><br>
             <small>Parent/Guardian</small>
         </div>
            
         </div>
 
 
+
+        <script>
+            variables = document.querySelectorAll('span');
+            
+            
+           // console.log(vars);
+           console.log("Oathtahking ");
+           
+           window.addEventListener('message', function(event) {  
+               names=Object.keys(event.data);
+               value = Object.values(event.data);
+               for (let i = 0; i < names.length; i++) {
+                  
+                   document.getElementById(names[i]).innerText =  value[i] || '';
+                   }
+               
+           
+           });
+
+         
+       </script>
 
         <div class="names"><div class="center"><h3>BARANGAY OFFICIAL</h3></div>
                 

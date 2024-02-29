@@ -44,21 +44,21 @@
            <p>
             THIS IS TO CERTIFY THAT the business trade activity described below:</p>
             <div class="center">
-				<h1> <p  id="output1" >[BNAME]
+				<h1> <p  id="businessNamere" >[BNAME]
                 </p></h1>
                 <b><h4 style="margin-top: -4%;">BUSINESS NAME / TRADE ACTIVITY
                 </h4></b>
 
             </div>
             <div class="center">
-				<h1> <u>[LOCATION]
+				<h1> <u id="businessAddressre">[LOCATION]
                 </u></h1>
                 <b><h4 style="margin-top: -4%;">LOCATION
                 </h4></b>
 
             </div>
             <div class="center">
-				<h1> <u>[NAME]
+				<h1> <u id="businessManagerre">[NAME]
                 </u></h1>
                 <b><h4 style="margin-top: -4%;">MANAGER/OPERATOR
                 </h4></b>
@@ -70,7 +70,7 @@
             
             <p class="indent">Complying with the provision of existing Barangay ordinances, rules and regulations being enforced in this Barangay.</p>
             <p class="indent"></p>Partially complying with the provision of existing Barangay ordinances, rules and regulation being enforced in this barangay:
-            In view of the foregoing, this Barangay, thru the undersigned:</p>
+          	  In view of the foregoing, this Barangay, thru the undersigned:
 
 
             <p class="indent">Interpose no objection for the issuance of the corresponding Mayor’s Permit being applied for.
@@ -81,7 +81,26 @@
                 <b>Issued this <di >[DAY]</di>   day of [MONTH]  [YEAR] . </b>
 		</div>
 		
-		
+        <script>
+            variables = document.querySelectorAll('span');
+            
+            
+           // console.log(vars);
+           console.log("Business Permit Renew ");
+           
+           window.addEventListener('message', function(event) {  
+               names=Object.keys(event.data);
+               value = Object.values(event.data);
+               for (let i = 0; i < names.length; i++) {
+                
+                   document.getElementById(names[i]).innerText =  value[i] || '';
+                   }
+               
+           
+           });
+
+         
+       </script>
 		
             <div class="names"><div class="center"><h3>BARANGAY OFFICIAL</h3></div>
                 
@@ -165,13 +184,6 @@
     		<img src="logo/border.png"  class="border" alt="">
 			<img src="logo/under.png" class="footer-b" alt="">
 	</div>
-    <script>
-        window.addEventListener('message', function(event) {
-            var data = event.data;
-            document.getElementById("output1").innerText = data.input1 || '';
-            document.getElementById("output2").innerText = data.input1 || '';
-            document.getElementById("output3").innerText = data.input2 || '';
-        });
-    </script>
+  
 </body>
 </html>
