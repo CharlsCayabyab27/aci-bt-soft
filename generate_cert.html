@@ -8,7 +8,6 @@
     iframe {
         position: absolute;
         left: 30%;
-<<<<<<< HEAD
         top: 5%;
         width: 21cm;
         height: 30cm;
@@ -26,28 +25,6 @@
 <body>
     <h1>Certificate Form</h1>
 
-=======
-        top:5%; 
-        width: 21cm; 
-        height: 30cm; 
-        border: none; 
-        overflow: hidden; 
-        transform: scale(0.80); 
-        transform-origin: 0 0; /* Set the scaling origin */
-        border: 2px solid black;    
-    }
-
-    .forms div {
-        display: none;
-    }
-
-    .forms div.active {
-        display: block;
-    }
-</style>
-
-<body>
->>>>>>> 2fb2101fbec036dd3f0e0a091b4077324696daed
     <select id="certificateType" onchange="toggleFields()">
         <option value="Indigency">Indigency (AICS)</option>
         <option value="certificate_of_indigency">Indigency</option>
@@ -58,7 +35,6 @@
         <option value="BarangayCertification">Barangay Certification (First time Job Seeker)</option>
         <option value="Oathtaking">Oathtaking</option>
         <option value="CertificateOfCohabitation">Certificate of Cohabitation</option>
-<<<<<<< HEAD
         
         <option value="">Barangay Clearance</option>
         <option value="">Certificate of Income</option>
@@ -249,131 +225,125 @@
 
             <div id="BarangayClearance" style="display: none">
                 <label for="">First Name:</label>
-                <input type="text"><br>
+                <input type="text" id="BarangayClearancefn"><br>
 
                 <label for="">Middle Name:</label>
-                <input type="text"><br>
+                <input type="text" id="BarangayClearancemn"><br>
 
                 <label for="">Last Name:</label>
-                <input type="text"><br>
+                <input type="text" id="BarangayClearanceln"><br>
 
                 <label for="">Suffix:</label>
-                <input type="text"><br>
+                <input type="text" id="BarangayClearances"><br>
 
                 <label for="">Purok:</label>
-                <input type="text"><br>
+                <input type="text" id="BarangayClearancep" ><br>
 
                 <label for="">Birthplace:</label>
-                <input type="text">
+                <input type="text" id="BarangayClearanceb">
 
                 <label for="">Civil Status:</label>
-                <input type="text"><br>
+                <input type="text" id="BarangayClearancec"><br>
 
                 <label for="">Period of Residency:</label>
-                <input type="text"><br>
+                <input type="text" id="BarangayClearancepr"><br>
 
                 <label for="">Purpose:</label>
-                <input type="text">
+                <input type="text" id="BarangayClearancepur">
 
                 <label for="">Issued Date:</label>
-                <input type="date">
+                <input type="date" id="BarangayClearanceid">
 
                 <label for="">Duty Officer Full Name:</label>
-                <input type="text">
+                <input type="text" id="BarangayClearancedof">
             </div>
 
             <div id="CertificateOfIncome" style="display: none">
                 <label for="">First Name:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfIncomefn"><br>
 
                 <label for="">Middle Name:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfIncomemn"><br>
 
                 <label for="">Last Name:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfIncomeln"><br>
 
                 <label for="">Suffix:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfIncomes"><br>
 
                 <label for="">Purok:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfIncomep"><br>
 
                 <label for="">Amount (In Word Form)</label>
-                <input type="text"><br>
-
-                <label for="">Amount (In Numeric Form)</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfIncomeaw"><br>
 
                 <label for="">Issued Date:</label>
-                <input type="date">
+                <input type="date" id="CertificateOfIncomeid">
 
                 <label for="">Duty Officer Full Name:</label>
-                <input type="text">
+                <input type="text" id="CertificateOfIncomedof">
             </div>
 
             <div id="CertificateOfTransfer" style="display: none">
                 <label for="">First Name:</label>
-                <input type="text"><br>
+                <input type="text"  id="CertificateOfTransferfn"><br>
 
                 <label for="">Middle Name:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfTransfermn"><br>
 
                 <label for="">Last Name:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfTransferln"><br>
 
                 <label for="">Suffix:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfTransfers"><br>
 
                 <label for="">Purok:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfTransferpu"><br>
 
                 <label for="">Nationality:</label>
-                <input type="text"><br>
-
-                <label for="">Nationality:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfTransferna"><br>
 
                 <label for="">Civil Status:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfTransfercs"><br>
 
                 <label for="">Previous Address:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfTransferpa"><br>
 
                 <label for="">Current Address:</label>
-                <input type="text"><br>
+                <input type="text" id="CertificateOfTransferca"><br>
 
                 <label for="">Issued Date:</label>
-                <input type="date">
+                <input type="date" id="CertificateOfTransferid">
             </div>
 
             <div id="Indigency" style="display: none">
                 <label for="">First Name:</label>
-                <input type="text"><br>
-
+                <input type="text" id="Indigencyfn" ><br>
+                
                 <label for="">Middle Name:</label>
-                <input type="text"><br>
+                <input type="text" id="Indigencymn"><br>
 
                 <label for="">Last Name:</label>
-                <input type="text"><br>
+                <input type="text" id="Indigencyln"><br>
 
                 <label for="">Suffix:</label>
-                <input type="text"><br>
+                <input type="text" id="Indigencys"><br>
 
                 <label for="">Civil Status</label>
-                <select name="" id="">
-                    <option value="">Married</option>
-                    <option value="">Single</option>
-                    <option value="">Widow</option>
+                <select name="" id="Indigencycs">
+                    <option value="married">Married</option>
+                    <option value="single">Single</option>
+                    <option value="widow">Widow</option>
                 </select>
 
                 <label for="">Purok:</label>
-                <input type="text"><br>
+                <input type="text" id="Indigencypu"><br>
 
                 <label for="">Purpose:</label>
-                <input type="text"><br>
+                <input type="text" id="Indigencypur"><br>
 
                 <label for="">Issued Date:</label>
-                <input type="date">
+                <input type="date" id="Indigencyid">
             </div>
         </div>
 
@@ -384,279 +354,53 @@
 
     <iframe id="myIframe" src="" width="100%" height="100%"></iframe>
 
-    <script>
-        const certificateMapping = {
-            'Indigency': { elementId: 'Indigency', iframeSrc: 'certificates/br.html' },
-            'DeathCertificate': { elementId: 'DeathCertificate', iframeSrc: 'certificates/death_cert.html' },
-            'LotOwnership': { elementId: 'LotOwnership', iframeSrc: 'certificates/lot.html' },
-            'BarangayBusinessPermitnew': { elementId: 'BarangayBusinessPermitnew', iframeSrc: 'certificates/br.html' },
-            'BarangayBusinessPermitrenew': { elementId: 'BarangayBusinessPermitrenew', iframeSrc: 'certificates/bn.html' },
-            'BarangayCertification': { elementId: 'BarangayCertification', iframeSrc: 'certificates/certification.html' },
-            'Oathtaking': { elementId: 'Oathtaking', iframeSrc: 'certificates/.html' },
-            'CertificateOfCohabitation': { elementId: 'CertificateOfCohabitation', iframeSrc: 'certificates/.html' }
-        };
-
-        function toggleFields() {
-            const certificateType = document.getElementById('certificateType').value;
-            const iframe = document.getElementById('myIframe');
-
-            // Hide all forms
-            document.querySelectorAll('.forms > div').forEach(div => {
-                div.style.display = 'none';
-            });
-
-            if (certificateMapping.hasOwnProperty(certificateType)) {
-                const { elementId, iframeSrc } = certificateMapping[certificateType];
-                document.getElementById(elementId).style.display = 'block';
-                iframe.src = iframeSrc;
-            } else {
-                iframe.src = '';
-            }
-
-            iframe.style.display = 'block';
-        }
-=======
-        <option value="BarangayClearance">Barangay Clearance</option>
-        <option value="certificateOfincome">Certificate of Income</option>
-        <option value="transfer">Certificate of Transfer</option>
-    </select>
-
-    <div class="forms"> 
-
-        <div id="Indigency" class="active" >
-            <label for="indigencyFullName">Full Name:</label>
-            <input type="text" id="indigencyFullName" onkeyup="updateIframe()"><br>
-
-            <label for="indigencyAddress">Address:</label>
-            <input type="text" id="indigencyAddress" onkeyup="updateIframe()"><br>
-
-            <label for="indigencyIssuedDate">Issued Date:</label>
-            <input type="date" id="Date" onchange="updateIframe()"> <br>
-        </div>
-
-        <div id="DeathCertificate">
-            <label for="deathFullName">Full Name [Name of the dead person]:</label>
-            <input type="text" id="deathFullName" onkeyup="updateIframe()"><br>
-
-            <label for="deathAge">Age:</label>
-            <input type="text" id="deathAge" onkeyup="updateIframe()"><br>
-
-            <label for="deathAddress">Address:</label>
-            <input type="text" id="deathAddress" onkeyup="updateIframe()"><br>
-
-            <label for="dateOfDeath">Date of death:</label>
-            <input type="date" id="dateOfDeath" onchange="updateIframe()"><br>
-
-            <label for="timeOfDeath">Time of death:</label>
-            <input type="time" id="timeOfDeath" onkeyup="updateIframe()"><br>
-
-            <label for="causeOfDeath">Cause of death:</label>
-            <input type="text" id="causeOfDeath" onkeyup="updateIframe()"><br>
-
-            <label for="requestingFullName">Full Name [Name of the requesting person]:</label>
-            <input type="text" id="requestingFullName" onkeyup="updateIframe()"><br>
-
-            <label for="relationshipToDeadPerson">Relationship to the dead person:</label>
-            <input type="text" id="relationshipToDeadPerson" onkeyup="updateIframe()"><br>
-
-            <label for="dateRequested">Date requested:</label>
-            <input type="date" id="dateRequested" onchange="updateIframe()"><br>
-        </div>
-        <div id="LotOwnership">
-            <label for="lotFullName">Full Name:</label>
-            <input type="text" id="lotFullName" onkeyup="updateIframe()"><br>
-    
-            <label for="address">Address:</label>
-            <input type="text" id="address" onkeyup="updateIframe()"><br>
-    
-            <label for="lotOption">Option:</label>
-            <select name="lotOption" id="lotOption" onchange="updateIframe()">
-                <option value="claimant" selected>Claimant</option>
-                <option value="beneficiary">Beneficiary</option>
-                <option value="actual">Actual Occupant</option>
-            </select>
-            
-            <label for="lotNumber">Lot Number:</label>
-            <input type="text" id="lotNumber" onkeyup="updateIframe()"><br>
-    
-            <label for="lotAreaNumerical">Area Measurement (Numerical Form):</label>
-            <input type="text" id="lotAreaNumerical" onkeyup="updateIframe()"><br>
-    
-            <label for="lotLocationAddress">Location Address:</label>
-            <input type="text" id="lotLocationAddress" onkeyup="updateIframe()"><br>
-    
-            <label for="lotIssuedDate">Issued Date:</label>
-            <input type="date" id="lotIssuedDate" onchange="updateIframe()"><br>
-        </div>
-    
-        
-        <div id="BarangayBusinessPermitnew">
-            <label for="businessName">Business name/ Trade Activity:</label>
-            <input type="text" id="businessName" onkeyup="updateIframe()"><br>
-    
-            <label for="businessAddress">Address:</label>
-            <input type="text" id="businessAddress" onkeyup="updateIframe()"><br>
-    
-            <label for="businessIssuedDate">MANAGER/OPERATOR</label>
-            <input type="text" id="businessManager" onkeyup="updateIframe()"><br>
-
-            
-            <label for="businessIssuedDate">Issued Date:</label>
-            <input type="date" id="datee" onchange="updateIframe()"><br>
-        </div>
-    
-        <div id="BarangayBusinessPermitrenew">
-            <label for="businessName">Business name/ Trade Activity:</label>
-            <input type="text" id="businessNamere" onkeyup="updateIframe()"><br>
-    
-            <label for="businessAddress">Address:</label>
-            <input type="text" id="businessAddressre" onkeyup="updateIframe()"><br>
-
-             <label for="businessManager">Address:</label>
-            <input type="text" id="businessManagerre" onkeyup="updateIframe()"><br>
-    
-            <label for="businessIssuedDate">Issued Date:</label>
-            <input type="date" id="datee"><br>
-        </div>
-    
-        <div id="BarangayCertification">
-            <label for="jobSeekerFullName">Full Name:</label>
-            <input type="text" id="jobSeekerFullName" onkeyup="updateIframe()"><br>
-    
-            <label for="jobSeekerAddress">Address:</label>
-            <input type="text" id="jobSeekerAddress"onkeyup="updateIframe()"><br>
-    
-            <label for="residencyPeriod">Period of Residency:</label>
-            <input type="text" id="residencyPeriod" onkeyup="updateIframe()"><br>
-    
-            <!-- <label for="certificationSignedDate">Signed date:</label>
-            <input type="date" id="certificationSignedDate"><br> -->
-<!--     
-            <label for="certificationValidationDate">Validation date:</label>
-            <input type="date" id="certificationValidationDate"><br> -->
-        </div>
-    
-        <div id="Oathtaking">
-            <label for="applicantFullName">Full Name of Applicant:</label>
-            <input type="text" id="applicantFullName"  onkeyup="updateIframe()"><br>
-    
-            <label for="applicantAge">Age:</label>
-            <input type="text" id="applicantAge"  onkeyup="updateIframe()"><br>
-    
-            <label for="applicantResidencyPeriod">Period of Residency:</label>
-            <input type="text" id="applicantResidencyPeriod"  onkeyup="updateIframe()"><br>
-    
-            <!-- <label for="applicantSignedDate">Signed date:</label>
-            <input type="date" id="applicantSignedDate"  onkeyup="updateIframe()"><br>
-     -->
-            <label for="guardianFullName">Guardian Full Name:</label>
-            <input type="text" id="guardianFullName"  onkeyup="updateIframe()"><br>
-    
-            <label for="guardianAge">Guardian Age:</label>
-            <input type="text" id="guardianAge"  onkeyup="updateIframe()"><br>
-    
-            <!-- <label for="guardianOption">Option (Parent/ Guardian):</label>
-            <input type="text" id="guardianOption"  onkeyup="updateIframe()"><br> -->
-<!--     
-            <label for="applicantName">Name of Applicant:</label>
-            <input type="text" id="applicantName" onkeyup="updateIframe()"><br> -->
-    
-            <label for="applicantAddress">Address:</label>
-            <input type="text" id="applicantAddress" onkeyup="updateIframe()"><br>
-<!--     
-            <label for="applicantResidencyPeriod2">Period of Residency:</label>
-            <input type="text" id="applicantResidencyPeriod2" onkeyup="updateIframe()"><br>
-     -->
-            <!-- <label for="guardianFullName2">Guardian Full Name:</label>
-            <input type="text" id="guardianFullName2" onkeyup="updateIframe()"><br> -->
-        </div>
-    
-        <div id="CertificateOfCohabitation" >
-            <label for="cohabitant1FullName">Full Name [male or female]:</label>
-            <input type="text" id="cohabitant1FullName" onkeyup="updateIframe()"><br>
-    
-            <label for="cohabitant1Birthdate">Birthdate:</label>
-            <input type="text" id="cohabitant1Birthdate" onkeyup="updateIframe()"><br>
-    
-            <label for="cohabitant2FullName">Full Name [male or female]:</label>
-            <input type="text" id="cohabitant2FullName" onkeyup="updateIframe()"><br>
-    
-            <label for="cohabitant2Birthdate">Birthdate:</label>
-            <input type="date" id="cohabitant2Birthdate" onkeyup="updateIframe()"><br>
-    
-            <label for="cohabitationAddress">Address:</label>
-            <input type="text" id="cohabitationAddress" onkeyup="updateIframe()"><br>
-    
-            <label for="dateOfMarriage">Date of Marriage:</label>
-            <input type="date" id="dateOfMarriage" onkeyup="updateIframe()"><br>
-    
-            <label for="periodOfMarriage">Period of marriage:</label>
-            <input type="text" id="periodOfMarriage" onkeyup="updateIframe()"><br>
-    
-            <label for="cohabitationIssuedDate">Issued Date:</label>
-            <input type="date" id="cohabitationIssuedDate" onkeyup="updateIframe()"><br>
-        </div>  
-      
-    </div>
-
-    <button onclick="printIframe()">Print Certificate</button>
-
-    <iframe id="myIframe" src="certificates/LotOwnership.html" width="100%" height="100%"></iframe>
-
     <script >
         
-  function toggleFields() {
-    
-    var certificateType = document.getElementById('certificateType').value;
-    var forms = document.getElementsByClassName('forms')[0].children;
-
-    for (var i = 0; i < forms.length; i++) {
-        if (forms[i].id === certificateType) {
-            forms[i].classList.add('active');
-   
-        } else {
-            forms[i].classList.remove('active');
-        }
-    }
-    var iframe = document.getElementById('myIframe');
-    iframe.src = "certificates/"+certificateType + ".html";
-   
-}
->>>>>>> 2fb2101fbec036dd3f0e0a091b4077324696daed
-
-function updateIframe() { 
-    var   names=[];//mali sa block nato
-    var certificateType = document.getElementById('certificateType').value;
-    var type =[];
-    var select = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('select');
-    for (var y = 0; y < select.length; y++) {
-        names.push(select[y].getAttribute('id'));
-    }
-    //  console.log(names + " tesihingin kdasdas");
-    var divs = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input');
-    // console.log(type[i]+'\n')
-    for (var x = 0; x < divs.length; x++){
-        names.push(divs[x].getAttribute('id'));
-        // console.log(divs[x]);
-    }
-////
-    // console.log(names);
-    var iframe = document.getElementById('myIframe').contentWindow;
-    var data = {};
-    for (i = 0; i < names.length; i++){
-        data[ names[i]]= document.getElementById(names[i]).value;
-    }
-    iframe.postMessage(data, '*');
-    
-    
-    // console.log(data);
-//naayos ko din pucha
-}
-function printIframe() {
-    var iframe = document.getElementById('myIframe').contentWindow;
-    iframe.print();
-}
-    </script>
+        function toggleFields() {
+          
+          var certificateType = document.getElementById('certificateType').value;
+          var forms = document.getElementsByClassName('forms')[0].children;
+      
+          for (var i = 0; i < forms.length; i++) {
+              if (forms[i].id === certificateType) {
+                  forms[i].classList.add('active');
+         
+              } else {
+                  forms[i].classList.remove('active');
+              }
+          }
+          var iframe = document.getElementById('myIframe');
+          iframe.src = "certificates/"+certificateType + ".html";
+         
+      }
+      
+      function updateIframe() { 
+          var   names=[];
+          var certificateType = document.getElementById('certificateType').value;
+          var type =[];
+          var select = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('select');
+          for (var y = 0; y < select.length; y++) {
+              names.push(select[y].getAttribute('id'));
+          }
+         
+          var divs = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input');
+            for (var x = 0; x < divs.length; x++){
+              names.push(divs[x].getAttribute('id'));
+             
+          }
+          var iframe = document.getElementById('myIframe').contentWindow;
+          var data = {};
+          for (i = 0; i < names.length; i++){
+              data[ names[i]]= document.getElementById(names[i]).value;
+          }
+          iframe.postMessage(data, '*');
+          
+      }
+      function printIframe() {
+          var iframe = document.getElementById('myIframe').contentWindow;
+          iframe.print();
+      }
+          </script>
 </body>
 
 </html>
