@@ -37,30 +37,47 @@ Coded by www.creative-tim.com
 
 <body style="background-color: #F4F3EF;">
     <div class="wrapper">
-        <div class="sidebar" data-color="white" data-active-color="danger">
+        <div class="sidebar" data-color="" data-active-color="danger">
             <div class="logo" style="background-color: #729ED9;">
-                <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-                    <div class="logo-image-big" style="padding: 25px;">
+                <a href="home.html" class="simple-text logo-normal">
+                    <div class="logo-image-big p-3">
                         <img src="./assets/img/cap-log.png">
                     </div>
                 </a>
             </div>
             <div class="sidebar-wrapper" style="background-color: #174793;">
                 <ul class="nav">
-                    <li class="active ">
+                    <li class="active">
                         <a href="home.html">
                             <i class="nc-icon nc-world-2"></i>
                             <p class="text">Home</p>
                         </a>
                     </li>
-                    <li>
-                        <a href=";">
-                            <i class="nc-icon nc-circle-10"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="nc-icon nc-world-2"></i>
                             <p class="text">Officials</p>
                         </a>
+                        <ul class="nav-content d-flex flex-column align-items-end">
+                            <li>
+                                <a class="nav-link" href="officials.html">
+                                    <p class="text">Barangay Officials</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="sk.html">
+                                    <p class="text">SK Officials</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="staff.html">
+                                    <p class="text">Staff Officials</p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href=";">
+                        <a href="about.html">
                             <i class="nc-icon nc-bell-55"></i>
                             <p class="text">About</p>
                         </a>
@@ -70,7 +87,7 @@ Coded by www.creative-tim.com
         </div>
         <div class="main-panel">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent" style="border: none;">
+            <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent border-0">
                 <div class="container-fluid" style="border-bottom: 1px solid rgba(26, 25, 19, 0.192);">
                     <div class="navbar-wrapper">
                         <a class="navbar-brand" href="javascript:;">Automated Credential Issuance: Barangay
@@ -93,8 +110,6 @@ Coded by www.creative-tim.com
                     overflow: hidden;
                     transform: scale(0.80);
                     transform-origin: 0 0;
-                    /* Set the scaling origin */
-                    /* border: 2px solid black; */
                 }
 
                 p {
@@ -104,8 +119,8 @@ Coded by www.creative-tim.com
             </style>
 
             <div class="content">
-                <div class="row" style="height: 40px; margin-left: 20px;">
-                    <select id="certificateType" onchange="toggleFields()" style="width: 450px;">
+                <div class="row ml-3">
+                    <select class="p-2" id="certificateType" onchange="toggleFields()" style="cursor: pointer;">
                         <option value="Indigency">Indigency (AICS)</option>
                         <option value="DeathCertificate">Death Certificate</option>
                         <option value="LotOwnership">Lot Ownership</option>
@@ -117,19 +132,23 @@ Coded by www.creative-tim.com
                     </select>
                 </div>
 
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-md-5">
                         <div class="card-user">
                             <div class="card-body forms">
                                 <div id="Indigency" style="display: none;">
-                                    <label for="indigencyFullName">Full Name:</label>
-                                    <input type="text" class="form-control" id="indigencyFullName"><br>
+                                    <form action="">
+                                        <label for="indigencyFullName">Full Name:</label>
+                                        <input type="text" class="form-control" id="indigencyFullName"><br>
 
-                                    <label for="indigencyAddress">Address:</label>
-                                    <input type="text" class="form-control" id="indigencyAddress"><br>
+                                        <label for="indigencyAddress">Address:</label>
+                                        <input type="text" class="form-control" id="indigencyAddress"><br>
 
-                                    <label for="indigencyIssuedDate">Issued Date:</label>
-                                    <input type="date" class="form-control" id="indigencyIssuedDate"><br>
+                                        <label for="indigencyIssuedDate">Issued Date:</label>
+                                        <input type="date" class="form-control" id="indigencyIssuedDate"><br>
+
+                                        <button>Print</button>
+                                    </form>
                                 </div>
 
                                 <div id="DeathCertificate" style="display: none;">
@@ -341,7 +360,6 @@ Coded by www.creative-tim.com
 
             iframe.style.display = 'block';
         }
-
     </script>
 
 

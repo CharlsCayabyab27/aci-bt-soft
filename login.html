@@ -36,20 +36,23 @@ Coded by www.creative-tim.com
 </head>
 
 <style>
-    body {
-        background-image: url(./assets/img/best_cap2.jpg);
+    /* body {
+        background-image: url(./assets/img/best_cap.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: contain;
         background-position: -100px;
-    }
+    } */
+
 </style>
 
-<body class="d-flex align-items-center justify-content-center" style="height: 100vh; width: 100%; background-color: #F4F3EF;">
-    <div class="content" style="width: 28%; border-radius: 10px; margin-left: 1000px;">
+<body class="d-flex align-items-center justify-content-center"
+    style="height: 100vh; width: 100%; background-color: #F4F3EF;">
+    <!-- <div class="content" style="width: 28%; border-radius: 10px; margin-left: 1000px;"> -->
+    <div class="content col-lg-3" style="border-radius: 10px;">
         <div class="card card-user">
             <div class="image">
-                <img src="./assets/img/tiniguiban.jpg" alt="...">
+                <img src="./assets/img/tiniguiban.jpg" alt="..." class="img-fluid">
             </div>
             <div class="card-body">
                 <div class="author">
@@ -61,29 +64,36 @@ Coded by www.creative-tim.com
                     <div class="row d-flex flex-column">
                         <div class="col-md-12 px-1">
                             <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" placeholder="Enter Username" value="">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">@</span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                        placeholder="Username">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-12 px-1">
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" placeholder="Enter Password">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="inputGroup-sizing-default"><i
+                                            class="nc-icon nc-lock-circle-open"></i></span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                        placeholder="Password">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="update ml-auto mr-auto">
                             <button type="submit" class="btn btn-round"
-                                style="width: 150px; background-color: #729ED9;">Login</button>
+                                style="background-color: #729ED9;">Login</button>
                         </div>
                     </div>
                 </form>
+
             </div>
             <div class="card-footer">
                 <hr>
-                <div class="button-container">
-                </div>
+                <!--Pang arte lang-->
             </div>
         </div>
     </div>
