@@ -60,11 +60,28 @@ Coded by www.creative-tim.com
                             <p class="text">Home</p>
                         </a>
                     </li>
-                    <li>
-                        <a href="officials.html">
-                            <i class="nc-icon nc-circle-10"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="nc-icon nc-world-2"></i>
                             <p class="text">Officials</p>
                         </a>
+                        <ul class="nav-content d-flex flex-column align-items-end">
+                            <li>
+                                <a class="nav-link" href="officials.html">
+                                    <p class="text">Barangay Officials</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="sk.html">
+                                    <p class="text">SK Officials</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="staff.html">
+                                    <p class="text">Staff Officials</p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="about.html">
@@ -91,7 +108,127 @@ Coded by www.creative-tim.com
             </nav>
 
             <div class="content">
-                
+                <div class="form-outline mb-4 col-md-12 d-flex justify-content-between">
+                    <div class="search col-md-4 d-flex">
+                        <input type="text" class="form-control" id="datatable-search-input" placeholder="search">
+                        <button class="">Search</button>
+                    </div>
+                    <div class="dropdown col-md-4">
+                        <select class="p-2" id="certificateType" onchange="toggleFields()" style="cursor: pointer;">
+                            <option value="Indigency">Indigency (AICS)</option>
+                            <option value="DeathCertificate">Death Certificate</option>
+                            <option value="LotOwnership">Lot Ownership</option>
+                            <option value="BarangayBusinessPermitnew">Barangay Business Permit New</option>
+                            <option value="BarangayBusinessPermitrenew">Barangay Business Permit Renew</option>
+                            <option value="BarangayCertification">Barangay Certification (First time Job Seeker)
+                            </option>
+                            <option value="Oathtaking">Oathtaking</option>
+                            <option value="CertificateOfCohabitation">Certificate of Cohabitation</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="datatable">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"> Simple Table</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class=" text-primary">
+                                            <th>
+                                                Name
+                                            </th>
+                                            <th>
+                                                Country
+                                            </th>
+                                            <th>
+                                                City
+                                            </th>
+                                            <th class="text-right">
+                                                Salary
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Dakota Rice
+                                                </td>
+                                                <td>
+                                                    Niger
+                                                </td>
+                                                <td>
+                                                    Oud-Turnhout
+                                                </td>
+                                                <td class="text-right">
+                                                    $36,738
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Minerva Hooper
+                                                </td>
+                                                <td>
+                                                    Curaçao
+                                                </td>
+                                                <td>
+                                                    Sinaai-Waas
+                                                </td>
+                                                <td class="text-right">
+                                                    $23,789
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Sage Rodriguez
+                                                </td>
+                                                <td>
+                                                    Netherlands
+                                                </td>
+                                                <td>
+                                                    Baileux
+                                                </td>
+                                                <td class="text-right">
+                                                    $56,142
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Philip Chaney
+                                                </td>
+                                                <td>
+                                                    Korea, South
+                                                </td>
+                                                <td>
+                                                    Overland Park
+                                                </td>
+                                                <td class="text-right">
+                                                    $38,735
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Jon Porter
+                                                </td>
+                                                <td>
+                                                    Portugal
+                                                </td>
+                                                <td>
+                                                    Gloucester
+                                                </td>
+                                                <td class="text-right">
+                                                    $98,615
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

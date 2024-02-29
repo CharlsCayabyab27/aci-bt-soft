@@ -17,8 +17,6 @@ Coded by www.creative-tim.com
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     Para sa Soft Eng
@@ -35,13 +33,6 @@ Coded by www.creative-tim.com
   <link href="./assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<style>
-  p {
-    color: white;
-    font-size: 12px;
-  }
-</style>
-
 <body style="background-color: #F4F3EF;">
   <div class="wrapper">
     <div class="sidebar" data-color="white" data-active-color="danger">
@@ -57,19 +48,25 @@ Coded by www.creative-tim.com
           <li class="active">
             <a href="home.html">
               <i class="nc-icon nc-world-2"></i>
-              <p class="text">Home</p>
+              <p class="text-white">Home</p>
             </a>
           </li>
+
           <li>
-            <a href="officials.html">
-              <i class="nc-icon nc-circle-10"></i>
-              <p class="text">Officials</p>
-            </a>
+            <details class="d-flex flex-column align-items-center justify-content-center">
+              <summary class="text-white">
+                Officials
+              </summary>
+              <a class="text-white" href="officials.html">Barangay Officials</a>
+              <a class="text-white" href="sk.html">SK Officials</a>
+              <a class="text-white" href="staff.html">Barangay Staffs</a>
+            </details>
           </li>
+
           <li>
             <a href="about.html">
               <i class="nc-icon nc-bell-55"></i>
-              <p class="text">About</p>
+              <p class="text-white">About</p>
             </a>
           </li>
         </ul>
@@ -77,36 +74,26 @@ Coded by www.creative-tim.com
     </div>
     <div class="main-panel" style="height: 100vh;">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent" style="border: none;">
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent border-0">
         <div class="container-fluid" style="border-bottom: 1px solid rgba(26, 25, 19, 0.192);">
           <div class="navbar-wrapper">
             <a class="navbar-brand" href="javascript:;">Automated Credential Issuance: Barangay Tiniguiban</a>
           </div>
           <div class="navbar-wrapper">
-            <a href="login.html"><button type="submit" class="btn btn-round"
-                style="width: 100px; background-color: #729ED9;">Logout</button></a>
+            <a href="login.html">
+              <button type="submit" class="btn btn-round">Logout</button>
+            </a>
           </div>
         </div>
       </nav>
 
       <style>
-        /* .card {
-          height: 350px;
-          width: 350px;
-          transition: transform 0.3s;
-          font-size: 18px;
-          font-weight: 400;
-          border-bottom: 2px solid black;
+        .navbar-wrapper button {
+          width: 100px;
+          background-color: #729ED9;
         }
 
-        .card:hover {
-          transform: scale(1.1);
-          background-color: rgb(255, 230, 91);
-        } */
-
         .card {
-          height: 350px;
-          width: 350px;
           color: #fff;
           font-weight: bold;
           cursor: pointer;
@@ -131,65 +118,58 @@ Coded by www.creative-tim.com
       </style>
 
       <div class="content">
-        <div class="row" style="border-radius: 20px; padding-top: 50px;">
-          <div class="col-md-12" style="padding: 0 45px;">
+        <div class="row d-flex justify-content-center pt-4">
+          <div class="col-md-11">
             <div class="welcome-card d-flex align-items-center justify-content-between">
               <h3>Welcome, User</h3>
-              <h5 class="">12/02/2024 10:59am</h5>
+              <h6 class="">12/02/2024 10:59am</h6>
             </div>
           </div>
 
-          <div class="col-md-12 d-flex align-items-center justify-content-around" style="height: 450px;">
+          <div class="col-md-12 d-flex align-items-center justify-content-around mt-4">
             <form action="gen_docs.html" class="row">
-              <div class="col-md-12">
-                <button class="card">
+              <div class="col-md-12"> <button class="card">
                   <div class="card-header">
-                    <h5 class="card-title"></h5>
+                    <h6 class="card-title">Generate Documents</h6>
                   </div>
-                  <div class="card-body ">
-                    <img height="200" width="220" src="./assets/img/certs.png" alt="">
+                  <div class="card-body">
+                    <img height="250" width="280" src="./assets/img/certs.png" alt="">
                   </div>
                   <div class="card-footer">
                     <hr>
                     <div class="stats">
-                      <i class="fa"></i> Generate Documents
                     </div>
                   </div>
                 </button>
               </div>
             </form>
-
-            <form action="view_trans.html" class="row">
-              <div class="col-md-12">
-                <button class="card">
-                  <div class="card-header ">
-                    <h5 class="card-title"></h5>
-                  </div>
-                  <div class="card-body ">
-                    <img height="200" width="220" src="./assets/img/list.png" alt="">
-                  </div>
-                  <div class="card-footer ">
-                    <hr>
-                    <div class="stats">
-                      <i class="fa"></i> View Transactions
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </form>
-
-            <form action="view_reports.html" class="row">
-              <div class="col-md-12">
-                <button class="card">
-                  <div class="card-header ">
+            <form action="view_trans.html">
+              <div class="col-md-12"> <button class="card">
+                  <div class="card-header">
+                    <h6 class="card-title">View Transactions</h6>
                   </div>
                   <div class="card-body">
-                    <img height="200" width="220" src="./assets/img/reports.png" alt="">
+                    <img height="250" width="280" src="./assets/img/list.png" alt="">
                   </div>
-                  <div class="card-footer ">
+                  <div class="card-footer">
                     <hr>
                     <div class="stats">
-                      <i class="fa"></i> View Reports
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </form>
+            <form action="view_reports.html">
+              <div class="col-md-12"> <button class="card">
+                  <div class="card-header">
+                    <h6 class="card-title">View Reports</h6>
+                  </div>
+                  <div class="card-body">
+                    <img height="250" width="280" src="./assets/img/reports.png" alt="">
+                  </div>
+                  <div class="card-footer">
+                    <hr>
+                    <div class="stats">
                     </div>
                   </div>
                 </button>
@@ -200,7 +180,6 @@ Coded by www.creative-tim.com
       </div>
     </div>
   </div>
-
 
   <script src="./assets/js/core/jquery.min.js"></script>
   <script src="./assets/js/core/popper.min.js"></script>
