@@ -13,7 +13,7 @@
         name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- CSS Files -->
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
@@ -76,7 +76,7 @@
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent border-0">
                 <div class="container-fluid" style="border-bottom: 1px solid rgba(26, 25, 19, 0.192);">
                     <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="javascript:;">Automated Credential Issuance: Barangay
+                        <a class="navbar-brand" href="">Automated Credential Issuance: Barangay
                             Tiniguiban</a>
                     </div>
                     <div class="navbar-wrapper">
@@ -87,14 +87,20 @@
             </nav>
 
             <style>
-                iframe {
-                    position: absolute;
-                    left: 1cm;
-                    width: 21cm;
-                    height: 30cm;
+                 @media print {
+            iframe {
+                border: none; 
+                width: 21cm !important;                 height: 29.7cm !important; 
+            }
+        } 
+                iFrame {
+                    position: fixed !important;
+                    left: 50%;
+                    width: 21.2cm;
+                    height: 32cm;
                     border: none;
-                    overflow: hidden;
-                    transform: scale(0.80);
+                    overflow: hidden !important;
+                    transform: scale(0.9);
                     transform-origin: 0 0;
                 }
 
@@ -102,15 +108,23 @@
                     color: white;
                     font-size: 12px;
                 }
-            </style>
+                
+    .certificates div {
+        display: none;
+    }
 
+    .certificates div.active {
+        display: block;
+    }
+            </style>
+           
             <div class="content">
                 <div class="row ml-3">
                     <select class="p-2" id="certificateType" onchange="toggleFields()" style="cursor: pointer;">
+                        <option value="">--select certificates--</option>
+                        <option value="LotOwnership">Lot Ownership</option>
                         <option value="Indigency">Indigency (AICS)</option>
-                        <option value="certificate_of_indigency">Indigency</option>
                         <option value="DeathCertificate">Death Certificate</option>
-                        <option value="LotOwnership" active>Lot Ownership</option>
                         <option value="BarangayBusinessPermitnew">Barangay Business Permit New</option>
                         <option value="BarangayBusinessPermitrenew">Barangay Business Permit Renew</option>
                         <option value="BarangayCertification">Barangay Certification (First time Job Seeker)</option>
@@ -119,7 +133,9 @@
                         <option value="BarangayClearance">Barangay Clearance</option>
                         <option value="certificateOfincome">Certificate of Income</option>
                         <option value="transfer">Certificate of Transfer</option>
-    
+                        <option value="CertificateOfEmployability">Certificate Of Employability</option>
+                        <option value="ComplaintCertificate">Complaint Certificate</option>
+
                     </select>
                 </div>
 
@@ -127,300 +143,490 @@
                     <div class="col-md-5">
                         <div class="card-user">
                             <div class="card-body forms">
-                                <div class="forms">
-                                    <div id="Indigency" style="display: none;">
-                                        <label for="indigencyFullName">Full Name:</label>
-                                        <input type="text" id="indigencyFullName"><br>
-                        
-                                        <label for="indigencyAddress">Address:</label>
-                                        <input type="text" id="indigencyAddress"><br>
-                        
+                                <button onclick="printIframe()">Print Iframe</button>
+                                  
+                                <div class="certificates" >
+                                     
+                                    <div id="Indigency">
+                                        <label for="">First Name:</label>
+                                        <input type="text"   class="form-control" ><br>
+    
+                                        <label for="">Middle Initial:</label>
+                                        <input type="text"  class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text"  class="form-control" ><br>
+    
+                                        <!-- <label for="">Last Name:</label>
+                                        <input type="text"  class="form-control" ><br>
+     -->
+                                        <label for="">Suffix</label>
+                                        <input type="text"  class="form-control" ><br>
+    
+                                        <label for="">Purok</label>
+                                        <input type="text"  class="form-control" ><br>
+    
+                                        <label for="">Purpose</label>
+                                        <input type="text"  class="form-control"  placeholder="Ex. Food Assistance"><br>
+    
+                                        <!-- <label for="">Purpose</label>
+                                        <input type="text"  class="form-control"  placeholder="Ex. Purpose Reason"><br>
+     -->
                                         <label for="indigencyIssuedDate">Issued Date:</label>
-                                        <input type="date" id="indigencyIssuedDate"><br>
+                                        <input type="date"  class="form-control" ><br>
                                     </div>
-                        
-                                    <div id="DeathCertificate" style="display: none;">
-                                        <label for="deathFullName">Full Name [Name of the dead person]:</label>
-                                        <input type="text" id="deathFullName"><br>
-                        
+    
+                                    <div id="DeathCertificate">
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control"  placeholder="Name of Dead Person"><br>
+    
+                                        <label for="">Middle Initial:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix</label>
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="deathAge">Age:</label>
-                                        <input type="text" id="deathAge"><br>
-                        
-                                        <label for="deathAddress">Address:</label>
-                                        <input type="text" id="deathAddress"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Purok:</label>
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="dateOfDeath">Date of death:</label>
-                                        <input type="text" id="dateOfDeath"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="timeOfDeath">Time of death:</label>
-                                        <input type="time" id="timeOfDeath"><br>
-                        
+                                        <input type="time" class="form-control" ><br>
+    
                                         <label for="causeOfDeath">Cause of death:</label>
-                                        <input type="text" id="causeOfDeath"><br>
-                        
-                                        <label for="requestingFullName">Full Name [Name of the requesting person]:</label>
-                                        <input type="text" id="requestingFullName"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control"  placeholder="Name of Requesting Person"><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="relationshipToDeadPerson">Relationship to the dead person:</label>
-                                        <input type="text" id="relationshipToDeadPerson"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="dateRequested">Date requested:</label>
-                                        <input type="date" id="dateRequested"><br>
+                                        <input type="date" class="form-control" ><br>
                                     </div>
-                        
-                                    <div id="LotOwnership" style="display: none;">
-                                        <label for="lotFullName">Full Name:</label>
-                                        <input type="text" id="lotFullName"><br>
-                        
-                                        <label for="lotAddress">Address:</label>
-                                        <input type="text" id="lotAddress"><br>
-                        
-                                        <label for="lotOption">Option:</label>
-                                        <select name="lotOption" id="lotOption">
-                                            <option value="claimant">Claimant</option>
-                                            <option value="beneficiary">Beneficiary</option>
-                                            <option value="actual">Actual Occupant</option>
-                                        </select>
-                        
+    
+                                    <div id="LotOwnership">
+                                        <label for="">First Name:</label>
+                                        <input type="text"  class="form-control" ><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control"  ><br>
+    
+                                        <label for="">Purok:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Claimant</label>
+                                        <input type="checkbox" class="form-control">
+    
+                                        <label for="">Beneficiary</label>
+                                        <input type="checkbox" class="form-control">
+    
+                                        <label for="">Actual Occupant</label>
+                                        <input type="checkbox" class="form-control">
+    
                                         <label for="lotNumber">Lot Number:</label>
-                                        <input type="text" id="lotNumber"><br>
-                        
+                                        <input type="text" class="form-control" placeholder="Lot No. 123"><br>
+    
                                         <label for="lotAreaNumerical">Area Measurement (Numerical Form):</label>
-                                        <input type="text" id="lotAreaNumerical"><br>
-                        
-                                        <label for="lotAreaWord">Area Measurement (Word Form):</label>
-                                        <input type="text" id="lotAreaWord" disabled><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <!-- <label for="lotAreaWord">Area Measurement (Word Form):</label>
+                                        <input type="text" class="form-control"  disabled><br>
+     -->
                                         <label for="lotLocationAddress">Location Address:</label>
-                                        <input type="text" id="lotLocationAddress"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="lotIssuedDate">Issued Date:</label>
-                                        <input type="date" id="lotIssuedDate"><br>
+                                        <input type="date" class="form-control" ><br>
                                     </div>
-                        
-                        
-                                    <div id="BarangayBusinessPermitnew" style="display: none;">
+    
+                                    <div id="BarangayBusinessPermitnew">
                                         <label for="businessName">Business name/ Trade Activity:</label>
-                                        <input type="text" id="businessName"><br>
-                        
-                                        <label for="businessAddress">Address:</label>
-                                        <input type="text" id="businessAddress"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="businessPurok">Purok:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Manager / Operator</label>
+                                        <input type="text" class="form-control">
+    
+                                        <label for="">Address(Manager / Operator)</label>
+                                        <input type="text" class="form-control">
+    
                                         <label for="businessIssuedDate">Issued Date:</label>
-                                        <input type="text" id="businessIssuedDate"><br>
+                                        <input type="text" class="form-control" ><br>
                                     </div>
-                        
-                                    <div id="BarangayBusinessPermitrenew" style="display: none;">
+    
+                                    <div id="BarangayBusinessPermitrenew">
                                         <label for="businessName">Business name/ Trade Activity:</label>
-                                        <input type="text" id="businessName"><br>
-                        
-                                        <label for="businessAddress">Address:</label>
-                                        <input type="text" id="businessAddress"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="businessPurok">Purok:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Manager / Operator</label>
+                                        <input type="text" class="form-control">
+    
+                                        <label for="">Address(Manager / Operator)</label>
+                                        <input type="text" class="form-control">
+    
                                         <label for="businessIssuedDate">Issued Date:</label>
-                                        <input type="text" id="businessIssuedDate"><br>
+                                        <input type="text" class="form-control" ><br>
                                     </div>
-                        
-                                    <div id="BarangayCertification" style="display: none;">
-                                        <label for="jobSeekerFullName">Full Name:</label>
-                                        <input type="text" id="jobSeekerFullName"><br>
-                        
-                                        <label for="jobSeekerAddress">Address:</label>
-                                        <input type="text" id="jobSeekerAddress"><br>
-                        
+    
+                                    <div id="BarangayCertification">
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="jobSeekerPurok">Purok:</label>
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="residencyPeriod">Period of Residency:</label>
-                                        <input type="text" id="residencyPeriod"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <!--(Day/Month/Year daw)-->
                                         <label for="certificationSignedDate">Signed date:</label>
-                                        <input type="date" id="certificationSignedDate"><br>
-                        
+                                        <input type="date" class="form-control" ><br>
+    
+                                        <!--(Month and Year daw)-->
                                         <label for="certificationValidationDate">Validation date:</label>
-                                        <input type="date" id="certificationValidationDate"><br>
+                                        <input type="date" class="form-control" ><br>
+    
+                                        <!--(Full name daw)-->
+                                        <label for="">Witness</label>
+                                        <input type="text" class="form-control">
                                     </div>
-                        
-                                    <div id="Oathtaking" style="display: none;">
-                                        <label for="applicantFullName">Full Name of Applicant:</label>
-                                        <input type="text" id="applicantFullName"><br>
-                        
+    
+                                    <div id="Oathtaking">
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="applicantAge">Age:</label>
-                                        <input type="text" id="applicantAge"><br>
-                        
+                                        <input type="number" class="form-control" ><br>
+    
                                         <label for="applicantResidencyPeriod">Period of Residency:</label>
-                                        <input type="text" id="applicantResidencyPeriod"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="applicantSignedDate">Signed date:</label>
-                                        <input type="date" id="applicantSignedDate"><br>
-                        
-                                        <label for="guardianFullName">Guardian Full Name:</label>
-                                        <input type="text" id="guardianFullName"><br>
-                        
+                                        <input type="date" class="form-control" ><br>
+    
+                                        <!--For Guardian-->
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="guardianAge">Guardian Age:</label>
-                                        <input type="text" id="guardianAge"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="guardianOption">Option (Parent/ Guardian):</label>
-                                        <input type="text" id="guardianOption"><br>
-                        
-                                        <label for="applicantName">Name of Applicant:</label>
-                                        <input type="text" id="applicantName"><br>
-                        
-                                        <label for="applicantAddress">Address:</label>
-                                        <input type="text" id="applicantAddress"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <!-- <label for="applicantName">Name of Applicant:</label>
+                                        <input type="text" class="form-control" ><br> -->
+    
+                                        <label for="applicantPurok">Purok:</label>
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="applicantResidencyPeriod2">Period of Residency:</label>
-                                        <input type="text" id="applicantResidencyPeriod2"><br>
-                        
-                                        <label for="guardianFullName2">Guardian Full Name:</label>
-                                        <input type="text" id="guardianFullName2"><br>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <!-- <label for="guardianFullName2">Guardian Full Name:</label>
+                                        <input type="text" class="form-control" ><br> -->
                                     </div>
-                        
-                                    <div id="CertificateOfCohabitation" style="display: none;">
-                                        <label for="cohabitant1FullName">Full Name [male or female]:</label>
-                                        <input type="text" id="cohabitant1FullName"><br>
-                        
+    
+                                    <div id="CertificateOfCohabitation">
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="cohabitant1Birthdate">Birthdate:</label>
-                                        <input type="text" id="cohabitant1Birthdate"><br>
-                        
-                                        <label for="cohabitant2FullName">Full Name [male or female]:</label>
-                                        <input type="text" id="cohabitant2FullName"><br>
-                        
-                                        <label for="cohabitant2Birthdate">Birthdate:</label>
-                                        <input type="date" id="cohabitant2Birthdate"><br>
-                        
-                                        <label for="cohabitationAddress">Address:</label>
-                                        <input type="text" id="cohabitationAddress"><br>
-                        
+                                        <input type="date" class="form-control" ><br>
+    
+                                        <!-- <label for="cohabitant2FullName">Full Name [male or female]:</label>
+                                        <input type="t=ext" class="form-control" ><br> -->
+    
+                                        <!-- <label for="cohabitant2Birthdate">Birthdate:</label>
+                                        <input type="date" class="form-control" ><br> -->
+    
+                                        <label for="cohabitationPurok">Purok:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <!--Month and Year daw-->
                                         <label for="dateOfMarriage">Date of Marriage:</label>
-                                        <input type="date" id="dateOfMarriage"><br>
-                        
+                                        <input type="date" class="form-control" ><br>
+    
                                         <label for="periodOfMarriage">Period of marriage:</label>
-                                        <input type="text" id="periodOfMarriage"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="cohabitationIssuedDate">Issued Date:</label>
-                                        <input type="date" id="cohabitationIssuedDate"><br>
+                                        <input type="date" class="form-control" ><br>
+    
+                                        <label for="">Duty Officer Full Name</label>
+                                        <input type="text" class="form-control">
                                     </div>
-                        
-                                    <div id="BarangayClearance" style="display: none">
+    
+                                    <div id="transfer">
                                         <label for="">First Name:</label>
-                                        <input type="text" id="BarangayClearancefn"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="">Middle Name:</label>
-                                        <input type="text" id="BarangayClearancemn"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="">Last Name:</label>
-                                        <input type="text" id="BarangayClearanceln"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="">Suffix:</label>
-                                        <input type="text" id="BarangayClearances"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="">Purok:</label>
-                                        <input type="text" id="BarangayClearancep" ><br>
-                        
-                                        <label for="">Birthplace:</label>
-                                        <input type="text" id="BarangayClearanceb">
-                        
-                                        <label for="">Civil Status:</label>
-                                        <input type="text" id="BarangayClearancec"><br>
-                        
-                                        <label for="">Period of Residency:</label>
-                                        <input type="text" id="BarangayClearancepr"><br>
-                        
-                                        <label for="">Purpose:</label>
-                                        <input type="text" id="BarangayClearancepur">
-                        
-                                        <label for="">Issued Date:</label>
-                                        <input type="date" id="BarangayClearanceid">
-                        
-                                        <label for="">Duty Officer Full Name:</label>
-                                        <input type="text" id="BarangayClearancedof">
-                                    </div>
-                        
-                                    <div id="CertificateOfIncome" style="display: none">
-                                        <label for="">First Name:</label>
-                                        <input type="text" id="CertificateOfIncomefn"><br>
-                        
-                                        <label for="">Middle Name:</label>
-                                        <input type="text" id="CertificateOfIncomemn"><br>
-                        
-                                        <label for="">Last Name:</label>
-                                        <input type="text" id="CertificateOfIncomeln"><br>
-                        
-                                        <label for="">Suffix:</label>
-                                        <input type="text" id="CertificateOfIncomes"><br>
-                        
-                                        <label for="">Purok:</label>
-                                        <input type="text" id="CertificateOfIncomep"><br>
-                        
-                                        <label for="">Amount (In Word Form)</label>
-                                        <input type="text" id="CertificateOfIncomeaw"><br>
-                        
-                                        <label for="">Issued Date:</label>
-                                        <input type="date" id="CertificateOfIncomeid">
-                        
-                                        <label for="">Duty Officer Full Name:</label>
-                                        <input type="text" id="CertificateOfIncomedof">
-                                    </div>
-                        
-                                    <div id="CertificateOfTransfer" style="display: none">
-                                        <label for="">First Name:</label>
-                                        <input type="text"  id="CertificateOfTransferfn"><br>
-                        
-                                        <label for="">Middle Name:</label>
-                                        <input type="text" id="CertificateOfTransfermn"><br>
-                        
-                                        <label for="">Last Name:</label>
-                                        <input type="text" id="CertificateOfTransferln"><br>
-                        
-                                        <label for="">Suffix:</label>
-                                        <input type="text" id="CertificateOfTransfers"><br>
-                        
-                                        <label for="">Purok:</label>
-                                        <input type="text" id="CertificateOfTransferpu"><br>
-                        
+                                        <input type="text" class="form-control"><br>
+    
                                         <label for="">Nationality:</label>
-                                        <input type="text" id="CertificateOfTransferna"><br>
-                        
+                                        <input type="text" class="form-control"><br>
+    
                                         <label for="">Civil Status:</label>
-                                        <input type="text" id="CertificateOfTransfercs"><br>
-                        
+                                        <input type="text" class="form-control"><br>
+    
                                         <label for="">Previous Address:</label>
-                                        <input type="text" id="CertificateOfTransferpa"><br>
-                        
+                                        <input type="text" class="form-control"><br>
+    
                                         <label for="">Current Address:</label>
-                                        <input type="text" id="CertificateOfTransferca"><br>
-                        
+                                        <input type="text" class="form-control"><br>
+    
                                         <label for="">Issued Date:</label>
-                                        <input type="date" id="CertificateOfTransferid">
+                                        <input type="date" class="form-control">
                                     </div>
-                        
-                                    <div id="Indigency" style="display: none">
+    
+                                    <div id="BarangayClearance">
                                         <label for="">First Name:</label>
-                                        <input type="text" id="Indigencyfn" ><br>
-                                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="">Middle Name:</label>
-                                        <input type="text" id="Indigencymn"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="">Last Name:</label>
-                                        <input type="text" id="Indigencyln"><br>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="">Suffix:</label>
-                                        <input type="text" id="Indigencys"><br>
-                        
-                                        <label for="">Civil Status</label>
-                                        <select name="" id="Indigencycs">
-                                            <option value="married">Married</option>
-                                            <option value="single">Single</option>
-                                            <option value="widow">Widow</option>
-                                        </select>
-                        
+                                        <input type="text" class="form-control" ><br>
+    
                                         <label for="">Purok:</label>
-                                        <input type="text" id="Indigencypu"><br>
-                        
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Birthplace:</label>
+                                        <input type="text" class="form-control">
+    
+                                        <label for="">Birthday:</label>
+                                        <input type="text" class="form-control">
+    
+                                        <label for="">Civil Status:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Period of Residency:</label>
+                                        <input type="text" class="form-control"><br>
+    
                                         <label for="">Purpose:</label>
-                                        <input type="text" id="Indigencypur"><br>
-                        
+                                        <input type="text" class="form-control">
+    
                                         <label for="">Issued Date:</label>
-                                        <input type="date" id="Indigencyid">
+                                        <input type="date" class="form-control">
+    
+                                        <label for="">Duty Officer Full Name:</label>
+                                        <input type="text" class="form-control">
                                     </div>
+    
+                                    <div id="Indigency">
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Age</label>
+                                        <input type="number" class="form-control">
+    
+                                        <label for="">Civil Status</label>
+                                        <select name="" class="form-control" >
+                                            <option value="">Married</option>
+                                            <option value="">Single</option>
+                                            <option value="">Widow</option>
+                                        </select>
+    
+                                        <label for="">Purok:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Purpose:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Issued Date:</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+    
+                                    <div id="certificateOfincome">
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Purok:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Amount (In Word Form)</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Amount (In Numeric Form)</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Issued Date:</label>
+                                        <input type="date" class="form-control">
+    
+                                        <label for="">Duty Officer Full Name:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+    
+                                    <div class="CertificateOfEmployability">
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Age</label>
+                                        <input type="number" class="form-control">
+    
+                                        <label for="">Purok:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Issued Date:</label>
+                                        <input type="date" class="form-control">
+    
+                                        <label for="">Duty Officer Full Name:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+    
+                                    <div class="ComplaintCertificate">
+                                        <!--With honorifics-->
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Age</label>
+                                        <input type="number" class="form-control">
+    
+                                        <label for="">Purok:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Date Filed:</label>
+                                        <input type="date" class="form-control">
+    
+                                        <!--Respondent Full Name-->
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Suffix:</label>
+                                        <input type="text" class="form-control"><br>
+    
+                                        <label for="">Case Number:</label>
+                                        <input type="number" class="form-control">
+    
+                                        <label for="">VAWC Official Name</label>
+                                        <input type="text" class="form-control">
+    
+                                        <label for="">Issued Date:</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -429,8 +635,10 @@
                     <div class="col-md-7">
                         <div class="card-docs d-flex align-items-center justify-content-center">
                             <div class="docs-container">
-                                <iframe id="myIframe" src="" width="100%" height="100%"></iframe>
+                                <iframe id="myIframe" src="" width="100%" height="100%" ></iframe>
+                                
                             </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -438,64 +646,15 @@
         </div>
     </div>
 
-    <script >
-        
-        function toggleFields() {
-          
-          var certificateType = document.getElementById('certificateType').value;
-          var forms = document.getElementsByClassName('forms')[0].children;
-      
-          for (var i = 0; i < forms.length; i++) {
-              if (forms[i].id === certificateType) {
-                  forms[i].classList.add('active');
-         
-              } else {
-                  forms[i].classList.remove('active');
-              }
-          }
-          var iframe = document.getElementById('myIframe');
-          iframe.src = "certificates/"+certificateType + ".html";
-         
-      }
-      
-      function updateIframe() { 
-          var   names=[];
-          var certificateType = document.getElementById('certificateType').value;
-          var type =[];
-          var select = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('select');
-          for (var y = 0; y < select.length; y++) {
-              names.push(select[y].getAttribute('id'));
-          }
-         
-          var divs = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input');
-            for (var x = 0; x < divs.length; x++){
-              names.push(divs[x].getAttribute('id'));
-             
-          }
-          var iframe = document.getElementById('myIframe').contentWindow;
-          var data = {};
-          for (i = 0; i < names.length; i++){
-              data[ names[i]]= document.getElementById(names[i]).value;
-          }
-          iframe.postMessage(data, '*');
-          
-         
-      }
-      function printIframe() {
-          var iframe = document.getElementById('myIframe').contentWindow;
-          iframe.print();
-      }
-          </script>
 
-
-    <script src="./assets/js/core/jquery.min.js"></script>
-    <script src="./assets/js/core/popper.min.js"></script>
-    <script src="./assets/js/core/bootstrap.min.js"></script>
-    <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- <script src="./assets/js/core/jquery.min.js"></script> -->
+    <!-- <script src="./assets/js/core/popper.min.js"></script> -->
+    <!-- <script src="./assets/js/core/bootstrap.min.js"></script> -->
     <script src="./assets/js/plugins/chartjs.min.js"></script>
     <script src="./assets/js/plugins/bootstrap-notify.js"></script>
-    <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+    <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>    
+    <script src="assets/js/main.js"> </script>
+
 </body>
 
 </html>
