@@ -65,19 +65,19 @@ function numberToWords(number) {
        for (let i = 0; i < names.length; i++) {
          
            document.getElementById(names[i]).innerText =  value[i] || '';
-           }}
+           }}//?
 
 
   
-           function printContent() {
-            var printWindow = window.open('', '_blank');
-            printWindow.document.open();
-            printWindow.document.write('<html><head><title>Printed Content</title></head><body>');
-            printWindow.document.write(document.documentElement.innerHTML);
-            printWindow.document.write('</body></html>');
-            printWindow.document.close();
-            printWindow.print();
-        }
+        //    function printContent() {
+        //     var printWindow = window.open('', '_blank');
+        //     printWindow.document.open();
+        //     printWindow.document.write('<html><head><title>Printed Content</title></head><body>');
+        //     printWindow.document.write(document.documentElement.innerHTML);
+        //     printWindow.document.write('</body></html>');
+        //     printWindow.document.close();
+        //     printWindow.print();
+        // }
   
     function toggleFields() {
       var certificateType = document.getElementById('certificateType').value;
@@ -85,10 +85,11 @@ function numberToWords(number) {
 
         document.getElementById(certificateType).querySelectorAll('input[type=text]').forEach(function(input) {
         input.setAttribute('onkeyup', 'updateText()');
+        console.log(input);
         });
-        // document.getElementById(certificateType).querySelectorAll('input[type=text]').forEach(function(input) {
-        // input.setAttribute('onkeyup', 'updateDate()');
-        // });
+        document.getElementById(certificateType).querySelectorAll('input[type=date]').forEach(function(input) {
+        input.setAttribute('onchange', 'updateText()');
+        });
 
       for (var i = 0; i < forms.length; i++) {
           if (forms[i].id === certificateType) {
@@ -101,24 +102,26 @@ function numberToWords(number) {
       var iframe = document.getElementById('myIframe');
       iframe.src = "certificates/"+certificateType + ".html";  
   }
-  function updateText() { 
-    console.log("okkk");
-    var iframe = document.getElementById('myIframe').contentWindow;
-      var select = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
-      var data = {};
-      for (var y = 0; y < select.length; y++) {
-        data["var"+y] = select[y].value;
-    }
-      
-      iframe.postMessage(data, '*');
-  }
+
+
   function printIframe() {
 
-    console.log("sdasdasd");
-
+   
     var iframe = document.getElementById('myIframe');
 var iframeWindow = iframe.contentWindow;
 iframeWindow.print(); 
   }
 
-
+  function updateText() { 
+    console.log("okkk");
+    var iframe = document.getElementById('myIframe').contentWindow;
+      var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
+      // console.log(document.getElementById('certificateType').value);
+      var data = {};
+      
+      for (var y = 0; y < text.length; y++) {
+        data["var"+y] = text[y].value;
+    }
+      
+      iframe.postMessage(data, '*');
+  }
