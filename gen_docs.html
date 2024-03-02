@@ -124,6 +124,7 @@
                         <option value="">--select certificates--</option>
                         <option value="LotOwnership">Lot Ownership</option>
                         <option value="Indigency">Indigency (AICS)</option>
+                        <option value="certificate_of_indigency">Indigency</option>
                         <option value="DeathCertificate">Death Certificate</option>
                         <option value="BarangayBusinessPermitnew">Barangay Business Permit New</option>
                         <option value="BarangayBusinessPermitrenew">Barangay Business Permit Renew</option>
@@ -133,7 +134,7 @@
                         <option value="BarangayClearance">Barangay Clearance</option>
                         <option value="certificateOfincome">Certificate of Income</option>
                         <option value="transfer">Certificate of Transfer</option>
-                        <option value="CertificateOfEmployability">Certificate Of Employability</option>
+                        <option value="Employability">Certificate Of Employability</option>
                         <option value="ComplaintCertificate">Complaint Certificate</option>
 
                     </select>
@@ -166,9 +167,9 @@
                                         <label for="">Purok</label>
                                         <input type="text"  class="form-control" ><br>
     
-                                        <label for="">Purpose</label>
+                                        <!-- <label for="">Purpose</label>
                                         <input type="text"  class="form-control"  placeholder="Ex. Food Assistance"><br>
-    
+     -->
                                         <!-- <label for="">Purpose</label>
                                         <input type="text"  class="form-control"  placeholder="Ex. Purpose Reason"><br>
      -->
@@ -190,13 +191,13 @@
                                         <input type="text" class="form-control" ><br>
     
                                         <label for="deathAge">Age:</label>
-                                        <input type="text" class="form-control" ><br>
+                                        <input type="number" class="form-control" ><br>
     
                                         <label for="">Purok:</label>
                                         <input type="text" class="form-control" ><br>
     
                                         <label for="dateOfDeath">Date of death:</label>
-                                        <input type="text" class="form-control" ><br>
+                                        <input type="date" class="form-control" ><br>
     
                                         <label for="timeOfDeath">Time of death:</label>
                                         <input type="time" class="form-control" ><br>
@@ -347,7 +348,7 @@
                                         <input type="number" class="form-control" ><br>
     
                                         <label for="applicantResidencyPeriod">Period of Residency:</label>
-                                        <input type="text" class="form-control" ><br>
+                                        <input type="number" class="form-control" ><br>
     
                                         <label for="applicantSignedDate">Signed date:</label>
                                         <input type="date" class="form-control" ><br>
@@ -366,10 +367,10 @@
                                         <input type="text" class="form-control" ><br>
     
                                         <label for="guardianAge">Guardian Age:</label>
-                                        <input type="text" class="form-control" ><br>
+                                        <input type="number" class="form-control" ><br>
     
-                                        <label for="guardianOption">Option (Parent/ Guardian):</label>
-                                        <input type="text" class="form-control" ><br>
+                                        <!-- <label for="guardianOption">Option (Parent/ Guardian):</label>
+                                        <input type="text" class="form-control" ><br> -->
     
                                         <!-- <label for="applicantName">Name of Applicant:</label>
                                         <input type="text" class="form-control" ><br> -->
@@ -378,7 +379,7 @@
                                         <input type="text" class="form-control" ><br>
     
                                         <label for="applicantResidencyPeriod2">Period of Residency:</label>
-                                        <input type="text" class="form-control" ><br>
+                                        <input type="number" class="form-control" ><br>
     
                                         <!-- <label for="guardianFullName2">Guardian Full Name:</label>
                                         <input type="text" class="form-control" ><br> -->
@@ -400,11 +401,17 @@
                                         <label for="cohabitant1Birthdate">Birthdate:</label>
                                         <input type="date" class="form-control" ><br>
     
-                                        <!-- <label for="cohabitant2FullName">Full Name [male or female]:</label>
-                                        <input type="t=ext" class="form-control" ><br> -->
+                                        <label for="">First Name:</label>
+                                        <input type="text" class="form-control" ><br>
     
-                                        <!-- <label for="cohabitant2Birthdate">Birthdate:</label>
-                                        <input type="date" class="form-control" ><br> -->
+                                        <label for="">Middle Name:</label>
+                                        <input type="text" class="form-control" ><br>
+    
+                                        <label for="">Last Name:</label>
+                                        <input type="text" class="form-control" ><br>
+
+                                        <label for="cohabitant1Birthdate">Birthdate:</label>
+                                        <input type="date" class="form-control" ><br>
     
                                         <label for="cohabitationPurok">Purok:</label>
                                         <input type="text" class="form-control" ><br>
@@ -414,13 +421,13 @@
                                         <input type="date" class="form-control" ><br>
     
                                         <label for="periodOfMarriage">Period of marriage:</label>
-                                        <input type="text" class="form-control" ><br>
+                                        <input type="number" class="form-control" ><br>
     
                                         <label for="cohabitationIssuedDate">Issued Date:</label>
                                         <input type="date" class="form-control" ><br>
     
                                         <label for="">Duty Officer Full Name</label>
-                                        <input type="text" class="form-control">
+                                        <input type="date" class="form-control">
                                     </div>
     
                                     <div id="transfer">
@@ -439,11 +446,11 @@
                                         <label for="">Purok:</label>
                                         <input type="text" class="form-control"><br>
     
-                                        <label for="">Nationality:</label>
+                                        <!-- <label for="">Nationality:</label>
                                         <input type="text" class="form-control"><br>
-    
-                                        <label for="">Civil Status:</label>
-                                        <input type="text" class="form-control"><br>
+     -->
+                                        <!-- <label for="">Civil Status:</label>
+                                        <input type="text" class="form-control"><br> -->
     
                                         <label for="">Previous Address:</label>
                                         <input type="text" class="form-control"><br>
@@ -493,7 +500,7 @@
                                         <input type="text" class="form-control">
                                     </div>
     
-                                    <div id="Indigency">
+                                    <div id="certificate_of_indigency">
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control" ><br>
     
@@ -519,8 +526,8 @@
                                         <label for="">Purok:</label>
                                         <input type="text" class="form-control"><br>
     
-                                        <label for="">Purpose:</label>
-                                        <input type="text" class="form-control"><br>
+                                        <!-- <label for="">Purpose:</label>
+                                        <input type="text" class="form-control"><br> -->
     
                                         <label for="">Issued Date:</label>
                                         <input type="date" class="form-control">
@@ -543,10 +550,10 @@
                                         <input type="text" class="form-control"><br>
     
                                         <label for="">Amount (In Word Form)</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="numnber" class="form-control"><br>
     
                                         <label for="">Amount (In Numeric Form)</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="number" class="form-control"><br>
     
                                         <label for="">Issued Date:</label>
                                         <input type="date" class="form-control">
@@ -555,7 +562,7 @@
                                         <input type="text" class="form-control">
                                     </div>
     
-                                    <div class="CertificateOfEmployability">
+                                    <div id="Employability">
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control" ><br>
     
@@ -581,7 +588,7 @@
                                         <input type="text" class="form-control">
                                     </div>
     
-                                    <div class="ComplaintCertificate">
+                                    <div id="ComplaintCertificate">
                                         <!--With honorifics-->
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control"><br>
@@ -635,7 +642,7 @@
                     <div class="col-md-7">
                         <div class="card-docs d-flex align-items-center justify-content-center">
                             <div class="docs-container">
-                                <iframe id="myIframe" src="" width="100%" height="100%" ></iframe>
+                                <iframe id="myIframe" src="certificates\test.html" width="100%" height="100%" ></iframe>
                                 
                             </div>
                           

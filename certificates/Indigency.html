@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="logo.css">
-<style>
+<script src="../assets/js/cert.js" ></script>
 
+<style>
 
     .content {
         /* text-align: justify; */
@@ -46,72 +47,22 @@
 				<br>
                 <div class="indent">
                     <b>THIS IS TO CERTIFY</b>
-                 that  <b><span id="indigencyFullName"></span></b> of legal age, Filipino citizen is a resident of  Purok <span id="indigencyAddress"></span> ,  Barangay Tiniguiban, Puerto Princesa City,  and belongs to indigent family of this Barangay.
+                 that  <b><span id="var0"></span> <span id="var1"></span> <span id="var2"></span>. <span id="var3"></span></b> of legal age, Filipino citizen is a resident of  Purok <span id="var4"></span> ,  Barangay Tiniguiban, Puerto Princesa City,  and belongs to indigent family of this Barangay.
                 </div>    
 			<br><br>
 
-            <div class="indent">This further certifies, that <b ><span id="indigencyFullName"></span></b> is in need of food assistance under the <b>AID TO INVIDUAL IN CRISIS SITUATION (AICS)</b> program from the Department of Social Welfare and Development due to the increasing prices of basic commodities in the locality that affects their daily livelihood and income.
+            <div class="indent">This further certifies, that <b ><span id="var"></span></b> is in need of food assistance under the <b>AID TO INVIDUAL IN CRISIS SITUATION (AICS)</b> program from the Department of Social Welfare and Development due to the increasing prices of basic commodities in the locality that affects their daily livelihood and income.
             </div>
                     <br><br>
                     <div class="indent">This certification is being issued upon the request of the above mentioned person for whatever legal purpose it may serve best.
                     </div>
                         <br><br><br>
 
-                        <div class="indent">Given this <span id="day"></span><sup id="sup"></sup>, </b> <span id="month"></span> <span id="year"></span> .</div>
+                        <div class="indent">Given this <span id="var"></span><sup id="sup"></sup>, </b> <span id="var"></span> <span id="var"></span> .</div>
 
                     
 		
 		</div>
-        <script src="../assets/js/main.js" ></script>
-        <script >
-            
-          
-            
-            window.addEventListener('message', function(event) {
-                var data = event.data;
-                console.log(data);
-                name = data.indigencyFullName;
-                address = data.input2;
-                document.getElementById("name").innerText = name || '';
-                document.getElementById("name2").innerText = name|| '';
-                document.getElementById("purok").innerText = address || '';
-                const dateInput = data.input3;
-                var date = new Date(dateInput);
-                document.getElementById("day").innerText = date.toLocaleDateString('en-US',{day: 'numeric'}) || '';
-                document.getElementById("month").innerText = date.toLocaleDateString('en-US',{month: 'long'}) || '';
-                document.getElementById("year").innerText = date.toLocaleDateString('en-US',{year: 'numeric'}) || '';
-                document.getElementById("sup").innerText = getOrdinalSuffix(date.toLocaleDateString('en-US',{day: 'numeric'})) || '';
-            }); 
-            // 
-0        </script>
-<!-- <script>
-    variables = document.querySelectorAll('span');
-    
-    
-   // console.log(vars);
-   console.log("Business Permit New ");
-   
-   window.addEventListener('message', function(event) {  
-    data = event.data;
-       names=Object.keys(data);
-       value = Object.values(data);
-       for (let i = 0; i < names.length; i++) {
-          if (names[i] != 'Date') {
-           document.getElementById(names[i]).innerText =  value[i] || '';
-           }}
-           const dateInput = data.Date;
-                var date = new Date(dateInput);
-                document.getElementById("day").innerText = date.toLocaleDateString('en-US',{day: 'numeric'}) || '';
-                document.getElementById("month").innerText = date.toLocaleDateString('en-US',{month: 'long'}) || '';
-                document.getElementById("year").innerText = date.toLocaleDateString('en-US',{year: 'numeric'}) || '';
-                document.getElementById("sup").innerText = getOrdinalSuffix(date.toLocaleDateString('en-US',{day: 'numeric'})) || '';
-       
-   
-   });
-
- 
-</script> -->
-		
         
             <div class="names"><div class="center"><h3>BARANGAY OFFICIAL</h3></div>
                 

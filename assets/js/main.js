@@ -66,22 +66,22 @@ function numberToWords(number) {
          
            document.getElementById(names[i]).innerText =  value[i] || '';
            }}//?
-
-
-  
-        //    function printContent() {
-        //     var printWindow = window.open('', '_blank');
-        //     printWindow.document.open();
-        //     printWindow.document.write('<html><head><title>Printed Content</title></head><body>');
-        //     printWindow.document.write(document.documentElement.innerHTML);
-        //     printWindow.document.write('</body></html>');
-        //     printWindow.document.close();
-        //     printWindow.print();
-        // }
   
     function toggleFields() {
       var certificateType = document.getElementById('certificateType').value;
       var forms = document.getElementsByClassName('certificates')[0].children;
+      
+      
+      for (var i = 0; i < forms.length; i++) {
+        if (forms[i].id === certificateType) {
+            forms[i].classList.add('active');
+   
+        } else {
+            forms[i].classList.remove('active');
+        }
+    }
+    var iframe = document.getElementById('myIframe');
+    doc ="certificates/"+certificateType + ".html"
 
         document.getElementById(certificateType).querySelectorAll('input[type=text]').forEach(function(input) {
         input.setAttribute('onkeyup', 'updateText()');
@@ -91,22 +91,13 @@ function numberToWords(number) {
         input.setAttribute('onchange', 'updateText()');
         });
 
-      for (var i = 0; i < forms.length; i++) {
-          if (forms[i].id === certificateType) {
-              forms[i].classList.add('active');
-     
-          } else {
-              forms[i].classList.remove('active');
-          }
-      }
-      var iframe = document.getElementById('myIframe');
-      iframe.src = "certificates/"+certificateType + ".html";  
+      console.log(doc);
+      iframe.src = doc;  
+
   }
 
 
   function printIframe() {
-
-   
     var iframe = document.getElementById('myIframe');
 var iframeWindow = iframe.contentWindow;
 iframeWindow.print(); 
@@ -116,12 +107,13 @@ iframeWindow.print();
     console.log("okkk");
     var iframe = document.getElementById('myIframe').contentWindow;
       var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
-      // console.log(document.getElementById('certificateType').value);
+      // console.log();
       var data = {};
       
       for (var y = 0; y < text.length; y++) {
         data["var"+y] = text[y].value;
     }
+    data["document_type"] = document.getElementById('certificateType').value;
       
       iframe.postMessage(data, '*');
   }

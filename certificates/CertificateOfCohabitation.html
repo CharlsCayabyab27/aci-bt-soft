@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="logo.css">
+<script src="../assets/js/cert.js"></script>
 <style>
     
     .content {
@@ -39,13 +40,14 @@
 
             <p>To whom it may concern:
 				</p>
-                <p class="indent"><b>THIS IS TO CERTIFY</b> that <b  id="name"></b>, born on <span id="Birthday"></span>  and <b id="name2"></b>, born on <span id="Birthday2"></span> , have been living as a spouses in good faith and talking on all of the task and responsibilities that follow with being in the said relationship, cohabiting in the same household at Purok <span id="purok"></span> , Barangay Tiniguiban, 
-                    Puerto Princesa City,Palawan and both holding themselves out to the community as spouses since <span id="month2"></span> <span id="year2"></span> (<span id="inyear"></span> years).
+                <p class="indent"><b>THIS IS TO CERTIFY</b> that <b ><span id="var0"> </span> <span id="var1"> </span>  <span id="var2"> </span>  <span id="var3"> </span> </b>, born on <span></span>  and <b><span id="var4"> </span> <span id="var5"> </span>  <span id="var6"> </span> </b>, born on <span></span> ,
+                     have been living as a spouses in good faith and talking on all of the task and responsibilities that follow with being in the said relationship, cohabiting in the same household at Purok <span id="var7"></span> , Barangay Tiniguiban, 
+                    Puerto Princesa City,Palawan and both holding themselves out to the community as spouses since <span></span> <span></span> (<span></span> years).
 			</p>
 
             <p class="indent">This certification is issued upon the request of the above named person for whatever legal purposes.
             </p>
-            <p class="indent">Given this <span id="day"></span> day of <span id="month"></span> <span id="year"></span> at Barangay Tiniguiban, Puerto Princesa City,Palawan.
+            <p class="indent">Given this <span></span> day of <span></span> <span></span> at Barangay Tiniguiban, Puerto Princesa City,Palawan.
 
 		
 		</div>
@@ -137,21 +139,6 @@
     		<img src="logo/border.png"  class="border" alt="">
 			<img src="logo/under.png" class="footer-b" alt="">
 	</div>
-    <script>
-        variables = document.querySelectorAll('span');
-        
-        
-       // console.log(vars);
-       console.log("Oathtahking ");
-       
-       window.addEventListener('message', function(event) {  
-           names=Object.keys(event.data);
-           value = Object.values(event.data);
-           for (let i = 0; i < names.length; i++) {
-              
-               document.getElementById(names[i]).innerText =  value[i] || '';
-               }
-       });
-   </script>
+
 </body>
 </html>

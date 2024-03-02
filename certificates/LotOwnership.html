@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="logo.css">
+<script src="../assets/js/cert.js" ></script>
+
+
 <style>
 
     .content {
@@ -45,78 +48,23 @@
         </div>
             <br> 
             TO WHOM IT MAY CONCERN: <br><br>
-           &nbsp;<b>THIS IS TO CERTIFY</b> that  <b id="name" >[NAME]</b>, of legal age, a resident <br>
-            of Purok <span id="purok"></span>, Barangay Tiniguiban, Puerto Princesa City. <br>
+           &nbsp;<b>THIS IS TO CERTIFY</b> that  <b   ><span id="var0"></span> <span id="var1"> </span> <span id="var2"> </span>. <span id="var3"></span></b>,  of legal age, a resident <br>
+            of Purok <span id="var4"></span>, Barangay Tiniguiban, Puerto Princesa City. <br>
             <br>
             <b>THIS CERTIFIES FURTHER</b> that the above-named individual is  the <br>
-            (<span id="choice1"> </span>) Claimant <br>
-            ( <span id="choice2"> </span>) Beneficiary<br>
-            ( <span id="choice3"> </span>) Actual Occupant <br>
+            (<span id=""> </span>) Claimant <br>
+            ( <span id=""> </span>) Beneficiary<br>
+            ( <span id=""> </span>) Actual Occupant <br>
             <br>
             <div class="center">
-            of Lot <b id="lot"></b> with an area of (<span id="inum"></span>) <span id="inword"></span>,</div>  located at Purok <span id="lpurok"></span>, Barangay Tiniguiban, Puerto Princesa City. <br>
+            of Lot <b id="var5"></b> with an area of (<span id="var6"></span>) ,</div>  located at Purok <span id="var7"></span>, Barangay Tiniguiban, Puerto Princesa City. <br>
             <br>
             <div class="center">
             Certification is being issued upon the request of the above-named person </div> for whatever legal purpose it may serve best. <br><br>
             Issued this <span id="day"></span><sup id="sup"></sup> day <span id =month></span> <span id="year"></span>.. <br></div>
            
- 
-            <script src="../assets/js/main.js"></script>
-            <script>
-                console.log("hello world!");
-                window.addEventListener('message', function(event) {
-                    var data = event.data;
-                    document.getElementById("name").innerText = data.lotFullName  || '';
-                    document.getElementById("purok").innerText = data.address || '';
-                    console.log(data.lotAddress);
-                    document.getElementById("lot").innerText = data.lotNumber || '';
-                    document.getElementById("inum").innerText = data.lotAreaNumerical || '';
-                    document.getElementById("lpurok").innerText = data.lotLocationAddress || '';
-                    document.getElementById("inword").innerText = numberToWords(data.lotAreaNumerical) || '';
-                    const dateInput = data.lotIssuedDate;
-                    var date = new Date(dateInput);
-                    document.getElementById("day").innerText = date.toLocaleDateString('en-US',{day: 'numeric'}) || '';
-                    document.getElementById("month").innerText = date.toLocaleDateString('en-US',{month: 'long'}) || '';
-                    document.getElementById("year").innerText = date.toLocaleDateString('en-US',{year: 'numeric'}) || '';
-                    document.getElementById("sup").innerText = getOrdinalSuffix(date.toLocaleDateString('en-US',{day: 'numeric'})) || '';
-                    switch (data.lotOption) {
-                        case 'claimant':
-                            document.getElementById("choice1").innerText = "/";
-                            document.getElementById("choice2").innerText = " ";
-                            document.getElementById("choice3").innerText = " ";
-                            
-                            break;
-                        case 'beneficiary':
-                            document.getElementById("choice1").innerText = " ";
-                            document.getElementById("choice2").innerText = "/";
-                            document.getElementById("choice3").innerText = " ";
-                            break;
-                        case 'actual':
-                            document.getElementById("choice1").innerText = " ";
-                            document.getElementById("choice2").innerText = " ";
-                            document.getElementById("choice3").innerText = "/";
-                            break;
-                        default:
-                            document.getElementById("choice1").innerText = "  ";
-                            document.getElementById("choice2").innerText = "  ";
-                            document.getElementById("choice3").innerText = "  ";
-                            break;
-                        
-                    }
-                    
-                }
-                );
-            </script>
-
-
-
-
-
-
-
-
-
            
+
            <!-- brrgy officials -->
            <div class="names"><div class="center"><h3>BARANGAY OFFICIAL</h3></div>
                 
@@ -198,8 +146,6 @@
 			<img src="logo/under.png" class="footer-b" alt="">
 	</div>
 </body>
-<p ></p>
-    <p id="output2"></p>
-    <p id="output3"></p>
 
+   
 </html>

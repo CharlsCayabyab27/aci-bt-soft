@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="logo.css">
+<script src="../assets/js/cert.js" ></script>
+
 <style>
    
 
@@ -45,10 +47,10 @@
 				<span>TO WHOM IT MAY CONCERN:</span>
 				<br><br>
 
-        <p class="paragraph-content">THIS IS TO CERTIFY that, <span id="name"></span>, <span id="age"></span>, is a resident of <span id="purok"></span>, Barangay Tiniguiban, Puerto Princesa City, was died last 
-            <span id="dateofdeath"></span> at about <span id="timeofdate"></span>. Cause of Death <strong id="causeofdeath"></strong>.</p>
+        <p class="paragraph-content">THIS IS TO CERTIFY that,<b> <span id="var0"></span> <span id="var1"></span> <span id="var2"></span> <span id="var3"></span></b>, <span ></span>, is a resident of <span id="var4"></span>, Barangay Tiniguiban, Puerto Princesa City, was died last 
+            <span id="dateofdeath"></span> at about <span id="timeofdate"></span>. Cause of Death <strong id="var5"></strong>.</p>
 
-        <p class="paragraph-content">This certification is being issued upon the request of <strong id="name2"></strong> <span id="relation"></span> for <strong>BURIAL ASSISTANCE</strong>.
+        <p class="paragraph-content">This certification is being issued upon the request of <strong ><span id="var6"></span> <span id="var7"></span> <span id="var8"></span> <span id="var9"></span></strong> <span id="var10"></span> for <strong>BURIAL ASSISTANCE</strong>.
         </p>
 
         <p class="paragraph-content">Given this <span id="day"></span><sup id="sup"></sup> day of <span id="month"></span> <span id="year"></span>.</p>, at Barangay Tiniguiban, Puerto Princesa City, Palawan.
@@ -62,29 +64,7 @@
 		</div>
  
 		
-		 <script src="../assets/js/main.js" ></script>
-        <script >
-            
-            window.addEventListener('message', function(event) {
-                var data = event.data;
-                document.getElementById("name").innerText = data.deathFullName || '';
-                document.getElementById("age").innerText = data.deathAge || '';
-                document.getElementById("purok").innerText = data.deathAddress || '';
-                document.getElementById("dateofdeath").innerText = data.dateOfDeath || '';
-                // document.getElementById("timeofdeath").innerText = data.timeOfDeath || '';
-                document.getElementById("causeofdeath").innerText = data.causeOfDeath || '';
-                document.getElementById("name2").innerText = data.requestingFullName || '';
-                document.getElementById("relation").innerText = data.relationshipToDeadPerson || '';
-                const dateInput = data.dateRequested;
-                var date = new Date(dateInput);
-                document.getElementById("day").innerText = date.toLocaleDateString('en-US',{day: 'numeric'}) || '';
-                document.getElementById("month").innerText = date.toLocaleDateString('en-US',{month: 'long'}) || '';
-                document.getElementById("year").innerText = date.toLocaleDateString('en-US',{year: 'numeric'}) || '';
-                document.getElementById("sup").innerText = getOrdinalSuffix(date.toLocaleDateString('en-US',{day: 'numeric'})) || '';
-            }); 
-            // 
-0        </script>
-		
+        
             <div class="names"><div class="center"><h3>BARANGAY OFFICIAL</h3></div>
                 
                 <div class="color center">PUNONG BARANGAY</div>

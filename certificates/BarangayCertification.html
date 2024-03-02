@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="logo.css">
+<script src="../assets/js/cert.js"></script>
 <style>
     .content {
         font-family: Calibri;
@@ -61,12 +62,12 @@
         </div>
             <br> 
 
-            <p>TO WHOM IM MAY CONCERN:</p>
+            <p>TO WHOM IM MAY CONCERN:</p>  
 
             
 
-            <p class="text-content"><strong>THIS IS TO CERTIFY</strong> that  <strong id="var0"> </strong>, a resident of Purok <span id="var1"></span>, Barangay 
-            Tiniguiban, Puerto Princesa City for <span id="var2"></span> years/ months, is a qualified to availee of <strong>RA  11261 </strong> or the <strong> FIRST TIME JOB SEEKER  ACT OF 2019.</strong></p>
+            <p class="text-content"><strong>THIS IS TO CERTIFY</strong> that  <strong > <span id="var0"></span> <span id="var1"> </span> <span id="var2"></span> <span id="var3"></span></strong>, a resident of Purok <span id="var4"></span>, Barangay 
+            Tiniguiban, Puerto Princesa City for <span id="var5"></span> years/ months, is a qualified to availee of <strong>RA  11261 </strong> or the <strong> FIRST TIME JOB SEEKER  ACT OF 2019.</strong></p>
 
             <p class="text-content"><strong>I FURTHER CERTIFY</strong> that the holder/bearer was informed of his/her rights, including the duties and responsibilities accorded by <strong> RA 11261 </strong> through the <strong>OATH OF UNDERTAKING</strong> he/she has signed and executed in the presence of Barangay Offiecial's.</p>
 
@@ -75,20 +76,6 @@
             <p class="text-content" >Signed this <span id="day"></span> day of <strong id="month"></strong> <span id="year"></span>, in the City/Municipality of Puerto Princesa City, Palawan.</p>
 
             <p class="text-content" >This certification is valid only until <strong><span id="vmonth"></span>  <span id="strong"></span></strong>, one(1) year from the issuance.</p>
-            <script>
-                variables = document.querySelectorAll('span'); 
-               // console.log(vars);
-               console.log("job seeker ");
-               
-               window.addEventListener('message', function(event) {  
-                   names=Object.keys(event.data);
-                   value = Object.values(event.data);
-                   for (let i = 0; i < names.length; i++) {
-                      
-                       document.getElementById(names[i]).innerText =  value[i] || '';
-                       }    
-               });
-           </script>
             <br>
             <div class="for-signature">
                 <span><strong>DAVID V. PACAÑOT</strong></span><br>
@@ -173,6 +160,7 @@
             <div class="cp"><h5>“Serbisyong Tapat, tungo sa magandang bukas,<b> BANGON TINIGUIBAN</b>”</h5></div>
     		<img src="logo/border.png"  class="border" alt="">
 			<img src="logo/under.png" class="footer-b" alt="">
+           
 	</div>
 </body>
 </html>

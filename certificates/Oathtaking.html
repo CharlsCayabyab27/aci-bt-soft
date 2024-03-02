@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="logo.css">
+<script src="../assets/js/cert.js"></script>
 <style>
     
     .content {
@@ -74,7 +75,7 @@
         </div>
             <br> 
 
-            <p class="text-content">I, <strong id="applicantFullName">JENNY V. LASALA</strong> <strong id= "applicantAge"></strong> years of age, resident of <span id="applicantResidencyPeriod"></span>(years/months), availing the benefit of Republic Act 11261, otherwise known as the First Time Job-seeker Act of 2019, do hereby declare, agree and undertake to abide and be found by the following: </p>
+            <p class="text-content">I, <strong><span id="var0"></span> <span id="var1"></span> <span id="var2"></span> <span id="var3"></span> </strong> <strong>{age}</strong> years of age, resident of <span >{period}</span>(years/months), availing the benefit of Republic Act 11261, otherwise known as the First Time Job-seeker Act of 2019, do hereby declare, agree and undertake to abide and be found by the following: </p>
 
             <ol>
               <li>That this is the first time that I will actively look for a job , and therefore requesting that a Barangay Certification be issued in my favor to avail the benefits of the law;</li>
@@ -102,19 +103,19 @@
             
             <div class="signatures-container">
               <div class="signature">
-                <span><strong>JENNY V. LASALA</strong></span><br>
+                <span><strong>{namedupe}</strong></span><br>
                 <small>First Time Job-seeker</small>
             </div>
 
             <div class="signature">
-              <span><strong>ROSEMARIE OCAMPO</strong></span><br>
+              <span><strong>{witness}</strong></span><br>
               <small>Barangay Kagawad/Duty Officer</small>
           </div>
           </div> <br>
           <span>For applicants at least fifteen years old to less than 18 years of age:
           </span> <br>
 
-          <p class="text-content" >  <u>I, <span id="guardianFullName"></span></u>,  <span id="guardianAge"></span> years of age ,parent /guardian of <u id="gname"> </u>, and a resident of Purok <span id="applicantAddress"></span>  for <span id="num"></span>(year/months), do hereby give my consent for my child/dependent to avail the benefits of Republic Act 11261 and be bound by the above-mentioned conditions.
+          <p class="text-content" >  <u>I, <span id="var4"></span> <span id="var5"></span> <span id="var6"></span> <span id="var7"></span> </u>,  <span id="guardianAge"></span> years of age ,parent /guardian of <u id="gname"> </u>, and a resident of Purok <span id="var8"></span>  for <span id="num"></span>(year/months), do hereby give my consent for my child/dependent to avail the benefits of Republic Act 11261 and be bound by the above-mentioned conditions.
           </p>  
 
 
@@ -126,29 +127,6 @@
         </div>
            
         </div>
-
-
-
-        <script>
-            variables = document.querySelectorAll('span');
-            
-            
-           // console.log(vars);
-           console.log("Oathtahking ");
-           
-           window.addEventListener('message', function(event) {  
-               names=Object.keys(event.data);
-               value = Object.values(event.data);
-               for (let i = 0; i < names.length; i++) {
-                  
-                   document.getElementById(names[i]).innerText =  value[i] || '';
-                   }
-               
-           
-           });
-
-         
-       </script>
 
         <div class="names"><div class="center"><h3>BARANGAY OFFICIAL</h3></div>
                 
