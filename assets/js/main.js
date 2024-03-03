@@ -83,11 +83,11 @@ function numberToWords(number) {
     var iframe = document.getElementById('myIframe');
     doc ="certificates/"+certificateType + ".html"
 
-        document.getElementById(certificateType).querySelectorAll('input[type=text]').forEach(function(input) {
+        document.getElementById(certificateType).querySelectorAll('input[type=text], input[type=number]').forEach(function(input) {
         input.setAttribute('onkeyup', 'updateText()');
         console.log(input);
         });
-        document.getElementById(certificateType).querySelectorAll('input[type=date]').forEach(function(input) {
+        document.getElementById(certificateType).querySelectorAll('input[type=date], input[type=time]').forEach(function(input) {
         input.setAttribute('onchange', 'updateText()');
         });
 
@@ -107,13 +107,17 @@ iframeWindow.print();
     console.log("okkk");
     var iframe = document.getElementById('myIframe').contentWindow;
       var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
+      var number =document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=number]');
+      var date= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=date]');
+      var time =document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=time]');
       // console.log();
       var data = {};
-      
+      for (var x = 0; x < number.length; x++) {
+        data["num"+x] = number[x].value;}
       for (var y = 0; y < text.length; y++) {
-        data["var"+y] = text[y].value;
-    }
-    data["document_type"] = document.getElementById('certificateType').value;
+        data["var"+y] = text[y].value;}
       
+        data["document_type"] = document.getElementById('certificateType').value;
+      console.log(data);
       iframe.postMessage(data, '*');
   }

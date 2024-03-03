@@ -1,6 +1,8 @@
 
 
-body {
+html, body {
+    width: 21cm !important; 
+    height: 29.7cm !important;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
