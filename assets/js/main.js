@@ -10,6 +10,25 @@ function getOrdinalSuffix(number) {
       default: return "th";
   }
 }
+function convertTime(timeInput) {
+  // Get the input element
+  // var timeInput = document.getElementById('timeInput');
+  // Split the input value into hours and minutes
+  var timeParts = timeInput.split(':');
+  var hours = parseInt(timeParts[0]);
+  var minutes = parseInt(timeParts[1]);
+
+  // Determine AM or PM
+  var period = (hours >= 12) ? 'PM' : 'AM';
+
+  // Convert to 12-hour format
+  hours = (hours > 12) ? hours - 12 : hours;
+  hours = (hours == 0) ? 12 : hours;
+
+  // Return the converted time
+  return hours + ':' + minutes.toString().padStart(2, '0') + ' ' + period;
+}
+
 function numberToWords(number) {
     const ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
     const teens = ['', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
@@ -112,7 +131,7 @@ iframeWindow.print();
       var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
       var number =document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=number]');
       var date= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=date]');
-      
+      var time= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=time]');
       var data = {};
       for (var x = 0; x < number.length; x++) {
         data["num"+x] = number[x].value;}
@@ -125,8 +144,8 @@ iframeWindow.print();
         data["year"+z] = dates.toLocaleDateString('en-US',{year: 'numeric'});
         data["sup"+z] =  getOrdinalSuffix(dates.toLocaleDateString('en-US',{day: 'numeric'}));
       }
+        data['time']= convertTime(time[0].value);
         data["document_type"] = document.getElementById('certificateType').value;
-      // console.log(data);
       iframe.postMessage(data, '*');
   
     }
