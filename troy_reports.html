@@ -47,12 +47,54 @@ Coded by www.creative-tim.com
 
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-      color: #000; /* Change to the color you desire */
+    color: #000; 
     }
 
+    .wrapper {
+        overflow-y: scroll; /* Hide the vertical scrollbar */
+        overflow-x: hidden; /* Optionally hide the horizontal scrollbar */
+        height: 100vh; /* Set height to 100% of the viewport height */
+      }
 
+        
 
-  
+        .card {
+          height: 350px;
+          width: 350px;
+          transition: transform 0.3s;
+          font-size: 18px;
+          font-weight: 400;
+          border-bottom: 2px solid black;
+        }
+
+        .card:hover {
+          transform: scale(1.1);
+          background-color: rgb(255, 230, 91);
+        }
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          filter: invert(1);
+        }
+        
+
+    .card-body {
+      cursor: pointer;
+    }
+
+    .background-border {
+      height: 70px; 
+      width: 70px; 
+      border: 1px solid rgba(255, 255, 255, 0.4); 
+      position: absolute; 
+      top: 50px; 
+      right: 45px;
+    }
+
+    .cert {
+      z-index: 1;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
 </style>
 
 <body style="background-color: #F4F3EF;">
@@ -102,97 +144,81 @@ Coded by www.creative-tim.com
         </div>
       </nav>
 
-      <style>
-        .card {
-          height: 350px;
-          width: 350px;
-          transition: transform 0.3s;
-          font-size: 18px;
-          font-weight: 400;
-          border-bottom: 2px solid black;
-        }
-
-        .card:hover {
-          transform: scale(1.1);
-          background-color: rgb(255, 230, 91);
-        }
-
-        .carousel-control-next-icon,
-.carousel-control-prev-icon {
-  filter: invert(1);
-}
-      </style>
 
 
-<div class="container content bg-white  border rounded  py-3">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-bs-ride="carousel" >
+<div class="container content bg-white  border rounded  py-3" style="width: 97%;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); overflow-x: hidden;"> 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-bs-ride="carousel" data-bs-interval="3000" >
       <div class="carousel-inner">
+      
           <div class="carousel-item active">
               <div class="row">
 
-
-                  <div class="col-md">
-                    <div class="card-body border my-1" style="background-color: rgb(255, 99, 132); border-radius: 20px;">
-                      <h6 class="card-title"><span> Barangay Business Permit (New) </span></h6>
+                  <div class="col-md" >
+                    <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 99, 132);">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Permit (New)</div>
     
-                      <div class="d-flex align-items-center">
-                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                          
-                          <!-- <i class="fa-solid fa-cart-shopping "></i> -->
-                          <img src="assets/view_report_icons/icon.png" class="rounded-circle bg-white p-1" height="50" alt="">
+                      <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                        <div class="card-icon">
+                          <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                         </div>
-                        <div class="ps-3 mx-5">
-                          <h5>145</h5>
-                          
-                          <!-- <span class="text-dark small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-    
+
+                        <div class="background-border"></div>
+                        <div class="cert mt-2" style="background-color: rgb(255, 99, 132);;">
+                        
+                          <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1"  height="70" alt="">
                         </div>
                       </div>
+                      <div class="row px-3">
+                        <div class="col text-white">More Info</div>
+                        <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                      </div>
                     </div>
-
                   </div>
 
                   
-
-
-                  <div class="col-md">
-                    <div class="card-body border bg-success my-1" style="border-radius: 20px;">
-                      <h6 class="card-title"> <span> Barangay Business Permit (Renew)</span></h6>
+                  <div class="col-md" >
+                    <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 230, 91)">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Permit (Renew)</div>
     
-                      <div class="d-flex align-items-center">
-                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                          
-                
-                          <img src="assets/view_report_icons/icon.png" class="rounded-circle bg-white p-1" alt="" height="50">
+                      <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                        <div class="card-icon">
+                          <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                         </div>
-                        <div class="ps-3 mx-5">
-                          <h5>145</h5>
-                          <!-- <span class="text-dark small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-    
+                        <div class="background-border"></div>
+                        <div class="cert mt-2" style="background-color: rgb(255, 230, 91);">
+                          <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                         </div>
                       </div>
+                      <div class="row px-3">
+                        <div class="col text-white">More Info</div>
+                        <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                      </div> 
                     </div>
-
                   </div>
                   
-                  <div class="col-md">
-                    <div class="card-body border my-1" style="background-color: rgb(255, 230, 91); border-radius: 20px;">
-                      <h6 class="card-title"> <span> Barangay Certification</span></h6>
+                  
+                  
+                  <div class="col-md" >
+                    <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Barangay Certification</div>
     
-                      <div class="d-flex align-items-center">
-                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                          
-                          <img src="assets/view_report_icons/icon.png" class="rounded-circle bg-white p-1" height="50" alt="">
+                      <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                        <div class="card-icon">
+                          <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                         </div>
-                        <div class="ps-3 mx-5">
-                          <h5>145</h5>
-                          <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-    
+                        <div class="background-border"></div>
+                        <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                          <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                         </div>
                       </div>
+                      <div class="row px-3">
+                        <div class="col text-white">More Info</div>
+                        <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                      </div>
                     </div>
-
                   </div>
+
+
               </div>
           </div>
 
@@ -200,64 +226,68 @@ Coded by www.creative-tim.com
           <div class="carousel-item">
               <div class="row">
 
-                <div class="col-md">
-                  <div class="card-body border my-1" style="background-color: rgb(255, 99, 132); border-radius: 20px;">
-                    <h6 class="card-title"> <span> Barangay Clearance</span></h6>
+                <div class="col-md" >
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 99, 132)">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Barangay Clearance</div>
   
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                        
-                        <img src="assets/view_report_icons/icon.png" class="p-3 rounded-circle bg-white p-1" height="50" alt="">
+                    <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                      <div class="card-icon">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                       </div>
-                      <div class="ps-3 mx-5">
-                        <h5>145</h5>
-                        <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-  
+                      <div class="background-border"></div>
+                      <div class="cert mt-2" style="background-color: rgb(255, 99, 132);">
+                        <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
+                    <div class="row px-3">
+                      <div class="col text-white">More Info</div>
+                      <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                    </div>
                   </div>
-
                 </div>
 
                 
 
 
-                <div class="col-md">
-                  <div class="card-body border bg-success my-1" style="border-radius:  20px;">
-                    <h6 class="card-title"><span> Certificate of Cohabitation</span></h5>
+                <div class="col-md" >
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 230, 91)">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Certificate of Cohabitation</div>
   
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                        
-                        <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
+                    <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                      <div class="card-icon">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                       </div>
-                      <div class="ps-3 mx-5">
-                        <h5>145</h5>
-                        <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-  
+                      <div class="background-border"></div>
+                      <div class="cert mt-2" style="background-color: rgb(255, 230, 91);">
+                        <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
+                    <div class="row px-3">
+                      <div class="col text-white">More Info</div>
+                      <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                    </div> 
                   </div>
-
                 </div>
-                
-                <div class="col-md">
-                  <div class="card-body border my-1" style="background-color: rgb(255, 230, 91); border-radius: 20px;">
-                    <h6 class="card-title"> <span> Certificate of Employability</span></h6>
+        
+
+                <div class="col-md" >
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Certificate of Employability</div>
   
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                        
-                        <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white" height="50" alt="">
+                    <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                      <div class="card-icon">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                       </div>
-                      <div class="ps-3 mx-5">
-                        <h5>145</h5>
-                        <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-  
+                      <div class="background-border"></div>
+                      <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                        <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
+                    <div class="row px-3">
+                      <div class="col text-white">More Info</div>
+                      <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                    </div> 
                   </div>
-
                 </div>
 
               </div>
@@ -268,189 +298,206 @@ Coded by www.creative-tim.com
             <div class="row">
 
 
-                <div class="col-md">
-                  <div class="card-body border my-1 bg-success" style="border-radius: 20px;">
-                    <h6 class="card-title"> <span> Certificate of Income</span></h6>
+              
+
+                <div class="col-md" >
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 99, 132)">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Certificate of Income</div>
   
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                        
-                        <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
+                    <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                      <div class="card-icon">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                       </div>
-                      <div class="ps-3 mx-5">
-                        <h5>145</h5>
-                        <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-   -->
+                      <div class="background-border"></div>
+                      <div class="cert mt-2" style="background-color: rgb(255, 99, 132);">
+                        <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
+                    <div class="row px-3">
+                      <div class="col text-white">More Info</div>
+                      <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                    </div>
                   </div>
-
                 </div>
 
 
-                <div class="col-md">
-                  <div class="card-body border my-1 bg-warning" style="border-radius:  20px;">
-                    <h6 class="card-title"><span> Complaint Certificate</span></h6>
+                <div class="col-md" >
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 230, 91)">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Complaint Certificate</div>
   
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                        
-                        <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
+                    <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                      <div class="card-icon">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                       </div>
-                      <div class="ps-3 mx-5">
-                        <h5>145</h5>
-                        <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-   -->
+                      <div class="background-border"></div>
+                      <div class="cert mt-2" style="background-color: rgb(255, 230, 91);">
+                        <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
-                  </div>
-
-                </div>
-
-                <div class="col-md">
-                  <div class="card-body border my-1 bg-danger" style="border-radius: 20px;">
-                    <h6 class="card-title"> <span> Death Certificate</span></h6>
-  
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                        
-                        <!-- <i class="fa-solid fa-cart-shopping p-4 rounded-circle bg-info"></i> -->
-                        <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
-                      </div>
-                      <div class="ps-3 mx-5">
-                        <h5>145</h5>
-                        <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-  
-                      </div>
+                    <div class="row px-3">
+                      <div class="col text-white">More Info</div>
+                      <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
-
                 </div>
+
+            <div class="col-md" >
+              <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Death Certificate</div>
+
+                <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                  <div class="card-icon">
+                    <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
+                  </div>
+                  <div class="background-border"></div>
+                  <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                    <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
+                  </div>
+                </div>
+                <div class="row px-3">
+                  <div class="col text-white">More Info</div>
+                  <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                </div>
+              </div>
             </div>
+
+        </div>
         </div>
 
         <div class="carousel-item">
           <div class="row">
 
+              <div class="col-md" >
+                <div class="card-body border rounded my-1 shadow-sm" style="background-color:  rgb(255, 99, 132)">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Indigency (AICS)</div>
 
-              <div class="col-md">
-                <div class="card-body border my-1 bg-danger" style="border-radius: 20px;">
-                  <h6 class="card-title"><span> Indigency (AICS)</span></h6>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                      
-                      <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
+                  <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                    <div class="card-icon">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                     </div>
-                    <div class="ps-3 mx-5">
-                      <h5>145</h5>
-                      <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-
+                    <div class="background-border"></div>
+                    <div class="cert mt-2" style="background-color: rgb(255, 99, 132);">
+                      <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                     </div>
                   </div>
+                  <div class="row px-3">
+                    <div class="col text-white">More Info</div>
+                    <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                  </div>
                 </div>
-
               </div>
 
 
-              <div class="col-md">
-                <div class="card-body border my-1 bg-success" style="border-radius: 20px;">
-                  <h6 class="card-title"> <span> Indigency</span></h6>
+              <div class="col-md" >
+                <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 230, 91)">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Indigency</div>
 
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                      
-                      <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
+                  <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                    <div class="card-icon">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
                     </div>
-                    <div class="ps-3 mx-5">
-                      <h5>145</h5>
-                      <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-
+                    <div class="background-border"></div>
+                    <div class="cert mt-2" style="background-color: rgb(255, 230, 91);">
+                      <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                     </div>
                   </div>
-                </div>
-
-              </div>
-
-              <div class="col-md">
-                <div class="card-body border my-1 bg-info" style="border-radius: 20px;">
-                  <h6 class="card-title"> <span> Lot Ownership</span></h6>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                      
-                      <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
-                    </div>
-                    <div class="ps-3 mx-5">
-                      <h5>145</h5>
-                      <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-
-                    </div>
+                  <div class="row px-3">
+                    <div class="col text-white">More Info</div>
+                    <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                   </div>
                 </div>
-
               </div>
+
+            
+              <div class="col-md" >
+                <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Lot Ownership</div>
+
+                  <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                    <div class="card-icon">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
+                    </div>
+                    <div class="background-border"></div>
+                    <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                      <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
+                    </div>
+                  </div>
+                  <div class="row px-3">
+                    <div class="col text-white">More Info</div>
+                    <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+                  </div> 
+                </div>
+              </div>
+
           </div>
       </div>
 
       <div class="carousel-item">
         <div class="row">
-          <div class="col-md">
 
-            <div class="card-body border bg-primary my-1" style="border-radius: 20px;">
-              <h6 class="card-title"><span> Transfer of Residency</span></h6>
+          
+          <div class="col-md" >
+            <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transfer of Residency</div>
 
-              <div class="d-flex align-items-center">
-                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                      
-                  <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
-                      </div>
-                      <div class="ps-3 mx-5">
-                  <h5>145</h5>
-                  <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-
+              <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                <div class="card-icon">
+                  <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
+                </div>
+                <div class="background-border"></div>
+                <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                  <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                 </div>
               </div>
-            </div>
-
-          </div>
-
-          <div class="col-md">
-            <div class="card-body border my-1 bg-warning" style="opacity: 0;">
-              <h6 class="card-title"> <span> Today</span></h6>
-
-              <div class="d-flex align-items-center">
-                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                      
-                  <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white" height="50" alt="">
-                      </div>
-                      <div class="ps-3 mx-5">
-                  <h5>145</h5>
-                 
-                </div>
+              <div class="row px-3">
+                <div class="col text-white">More Info</div>
+                <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
               </div>
             </div>
-
           </div>
 
-          <div class="col-md">
-            <div class="card-body border  my-1"  style="opacity: 0;">
-              <h6 class="card-title"> <span>Today</span></h6>
 
-              <div class="d-flex align-items-center">
-                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center py-1">
-                      
-                  <img src="assets/view_report_icons/icon.png" class="p-1 rounded-circle bg-white p-1" height="50" alt="">
-                      </div>
-                      <div class="ps-3 mx-5">
-                  <h5>145</h5>
-                  <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
+          <div class="col-md" >
+            <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235); opacity: 0;">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Barangay Clearance</div>
 
+              <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                <div class="card-icon">
+                  <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
+                </div>
+                <div class="background-border"></div>
+                <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                  <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                 </div>
               </div>
+              <div class="row px-3">
+                <div class="col text-white">More Info</div>
+                <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+              </div>
             </div>
-
           </div>
+
+
+          <div class="col-md" >
+            <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235); opacity: 0;">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Barangay Clearance</div>
+
+              <div class="d-flex align-items-center justify-content-between mb-1"  style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                <div class="card-icon">
+                  <div class="h5 mb-0 font-weight-bold text-gray-800 ml-5">145</div>
+                </div>
+                <div class="background-border"></div>
+                <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                  <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
+                </div>
+              </div>
+              <div class="row px-3">
+                <div class="col text-white">More Info</div>
+                <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
+              </div>
+            </div>
+          </div>
+
         </div>
     </div>
     
@@ -466,21 +513,23 @@ Coded by www.creative-tim.com
       </a>
   </div>
 </div>
+
 <!--End of Carousel -->
 
 <!--Start of Charts-->
 
-<div class="container content bg-white border rounded py-2 my-3">
+<div class="container content bg-white border rounded py-2 mt-2" style="width: 97%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); overflow: hidden;">
   <div id="chartCarousel" class="carousel slide " data-ride="carousel" data-bs-ride="carousel">
       <div class="carousel-inner">
 
           <div class="carousel-item active">
               <div class="row">
-                  <div class="col-md">
-                      <canvas id="chartMeatvsSeafood" style="width: 800px; height: 240px; "></canvas>
+                  <div class="col-lg">
+                      <canvas id="chartMeatvsSeafood" style="width: 800px; height: 210px; "></canvas>
 
                       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                       <script>
+                        
                           // Sample data (replace with your actual data)
                           const Sales_Meat = [100, 200, 150, 300, 250, 180, 220, 190, 280, 320, 270, 310];
                           const Sales_Seafood = [80, 150, 120, 200, 180, 160, 190, 170, 210, 240, 220, 230];
@@ -517,58 +566,47 @@ Coded by www.creative-tim.com
                               }
                           };
                           
-                          // Render the bar chart
-                          const chartMeatvsSeafood = new Chart(
-                              document.getElementById('chartMeatvsSeafood').getContext('2d'),
-                              config3
-                          );
+                        
+                              // Function to update chart dimensions based on window size
+                              function updateChartDimensions(chart) {
+                                var chartCanvas = chart.canvas;
+                                var parent = chartCanvas.parentNode;
+                                var containerWidth = parent.offsetWidth;
+                                var containerHeight = parent.offsetHeight;
+
+                                chartCanvas.style.width = containerWidth + 'px';
+                                chartCanvas.style.height = containerHeight + 'px';
+                                chart.resize(); // Resize the chart
+                              }
+
+                              // Render the bar chart
+                              const chartMeatvsSeafood = new Chart(
+                                document.getElementById('chartMeatvsSeafood').getContext('2d'),
+                                config3
+                              );
+
+                              // Update chart dimensions when the window is resized
+                              window.addEventListener('resize', function() {
+                                updateChartDimensions(chartMeatvsSeafood);
+                              });
+
+                              // Initial call to update chart dimensions
+                              updateChartDimensions(chartMeatvsSeafood);
+
+
                       </script>
+
+                      
                   </div>
               </div>
           </div>
           
-          <!-- <div class="carousel-item">
-              <div class="row d-flex justify-content-center">
-                  <div class="col-md-4">
-                      <canvas id="chartShippers" height="40" width="40"></canvas> -->
-                      
-                      <!-- <script>
-                          // setup block
-                          const Count_Orders = [300, 50, 100, 500];
-                          const label_piechart = ['Red', 'Blue', 'Yellow'];
-                          const data1 = {
-                              labels: label_piechart,
-                              datasets: [{
-                                  label: 'My First Dataset',
-                                  data: Count_Orders,
-                                  backgroundColor: [
-                                      'rgb(255, 99, 132)',
-                                      'rgb(54, 162, 235)',
-                                      'rgb(255, 165, 0)'
-                                  ],
-                                  hoverOffset: 4
-                              }]
-                          };
-                          //  config block 
-                          const config = {
-                              type: 'pie',
-                              data: data1,
-                          };
-                          //  render block 
-                          const chartShippers = new Chart(
-                              document.getElementById('chartShippers'),
-                              config
-                          );
-                      </script> -->
-                  <!-- </div>
-              </div>
-          </div> -->
-
-
           <div class="carousel-item">
             <div class="row d-flex justify-content-center">
                 <div class="col-md">
-                  <canvas id="chartTop3" style="width: 800px; height: 240px;"></canvas>
+          
+                  <canvas id="chartTop3" style="width: 800px; height: 210px;"></canvas>
+
 
                   <script>
                     // <!-- setup block -->
@@ -613,9 +651,30 @@ Coded by www.creative-tim.com
                     };
                     // <!-- render block -->
                     const chartTop3 = new Chart(
-                    document.getElementById('chartTop3'),
+                    document.getElementById('chartTop3').getContext('2d'),
                     config2
                     );
+
+                  
+                    // Function to update chart dimensions based on window size
+                    function updateChartDimensions(chart) {
+                      var chartCanvas = chart.canvas;
+                      var parent = chartCanvas.parentNode;
+                      var containerWidth = parent.offsetWidth;
+                      var containerHeight = parent.offsetHeight;
+
+                      chartCanvas.style.width = containerWidth + 'px';
+                      chartCanvas.style.height = containerHeight + 'px';
+                      chart.resize(); // Resize the chart
+                    }
+                    // Update chart dimensions when the window is resized
+                    window.addEventListener('resize', function() {
+                      updateChartDimensions(chartTop3);
+                    });
+
+                    // Initial call to update chart dimensions
+                    updateChartDimensions(chartTop3);
+
                     </script>
                 </div>
             </div>
@@ -637,56 +696,6 @@ Coded by www.creative-tim.com
       </a>
   </div>
 </div>
-</div>
-
-
-        
-
-        
-
-<!-- 
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md">
-              <canvas id="myPieChart"></canvas>
-            </div>
-          </div>
-        </div>
-         -->
-        
-
-  <!-- <script>
-    // Sample data (replace with your actual data)
-    const data = {
-      labels: ['Red', 'Blue', 'Yellow'],
-      datasets: [{
-        data: [300, 50, 100],
-        backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
-        ],
-        hoverOffset: 4
-      }]
-    };
-
-    // Configuration options
-    const config = {
-      type: 'pie',
-      data: data,
-    };
-
-    // Render the pie chart
-    const myPieChart = new Chart(
-      document.getElementById('myPieChart').getContext('2d'),
-      config
-    );
-  </script> -->
-        
-
-
-
-
 
 
 <!-- End of Charts-->
