@@ -43,7 +43,6 @@ Coded by www.creative-tim.com
         background-size: contain;
         background-position: -100px;
     } */
-
 </style>
 
 <body class="d-flex align-items-center justify-content-center"
@@ -66,18 +65,45 @@ Coded by www.creative-tim.com
                             <div class="form-group">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">@</span>
-                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                    <input type="text" class="user-input" aria-label="Sizing example input"
                                         placeholder="Username">
                                 </div>
                             </div>
                         </div>
+
+                        <style>
+                            .user-input, .password-input {
+                                display: block;
+                                width: 85%;
+                                padding: 0.375rem 0.75rem;
+                                font-size: .86rem;
+                                line-height: 1.5;
+                                color: #495057;
+                                background-color: #fff;
+                                background-clip: padding-box;
+                                border: 1px solid #ced4da;
+                                border-left: none;
+                                border-radius: 0.25rem;
+                                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                            }
+
+                            .toggle-password {
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translateY(-50%);
+                                cursor: pointer;
+                            }
+                        </style>
+
                         <div class="col-md-12 px-1">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-3" style="position: relative;">
                                     <span class="input-group-text" id="inputGroup-sizing-default"><i
                                             class="nc-icon nc-lock-circle-open"></i></span>
-                                    <input type="text" class="form-control" aria-label="Sizing example input"
-                                        placeholder="Password">
+                                    <input type="password" id="password" class="password-input"
+                                        placeholder="Password" />
+                                    <span class="toggle-password" onclick="togglePasswordVisibility()" style="opacity: 0.6;">🙈</span>
                                 </div>
                             </div>
                         </div>
@@ -97,6 +123,21 @@ Coded by www.creative-tim.com
             </div>
         </div>
     </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var togglePassword = document.querySelector(".toggle-password");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.textContent = "🙉";
+            } else {
+                passwordInput.type = "password";
+                togglePassword.textContent = "🙈";
+            }
+        }
+    </script>
 
     <script src="./assets/js/core/jquery.min.js"></script>
     <script src="./assets/js/core/popper.min.js"></script>
