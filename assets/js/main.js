@@ -104,14 +104,14 @@ function numberToWords(number) {
 
         document.getElementById(certificateType).querySelectorAll('input[type=text], input[type=number]').forEach(function(input) {
         input.setAttribute('onkeyup', 'updateText()');
-        console.log(input);
+        // console.log(input);
         });
         document.getElementById(certificateType).querySelectorAll('input[type=date], input[type=time]').forEach(function(input) {
         input.setAttribute('onchange', 'updateText()');
         });
-        document.getElementById(certificateType).querySelectorAll('input[type=checkbox]').forEach(function(input) {
-          input.setAttribute('onclick', 'updateText()');
-          });
+        // document.getElementById(certificateType).querySelectorAll('input[type=checkbox]').forEach(function(input) {
+        //   input.setAttribute('onclick', 'updateText()');
+        //   });
 
       // console.log(doc);
       iframe.src = doc;  
@@ -146,6 +146,7 @@ iframeWindow.print();
       }
         data['time']= convertTime(time[0].value);
         data["document_type"] = document.getElementById('certificateType').value;
+        console.log(data);
       iframe.postMessage(data, '*');
   
     }
