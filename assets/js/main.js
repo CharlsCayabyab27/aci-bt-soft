@@ -80,7 +80,7 @@ function numberToWords(number) {
   function commonText(data) {
       names=Object.keys(data);
        value = Object.values(data);
-       console.log(names);
+      //  console.log(names);
        for (let i = 0; i < names.length; i++) {
          
            document.getElementById(names[i]).innerText =  value[i] || '';
@@ -103,15 +103,15 @@ function numberToWords(number) {
     doc ="certificates/"+certificateType + ".html"
 
         document.getElementById(certificateType).querySelectorAll('input[type=text], input[type=number]').forEach(function(input) {
-        input.setAttribute('onkeyup', 'updateText()');
+        input.setAttribute('oninput', 'updateText()');
         // console.log(input);
         });
         document.getElementById(certificateType).querySelectorAll('input[type=date], input[type=time]').forEach(function(input) {
         input.setAttribute('onchange', 'updateText()');
         });
-        // document.getElementById(certificateType).querySelectorAll('input[type=checkbox]').forEach(function(input) {
-        //   input.setAttribute('onclick', 'updateText()');
-        //   });
+        document.getElementById(certificateType).querySelectorAll('input[type=checkbox]').forEach(function(input) {
+          input.setAttribute('onclick', 'updateText()');
+          });
 
       // console.log(doc);
       iframe.src = doc;  
@@ -125,28 +125,121 @@ var iframeWindow = iframe.contentWindow;
 iframeWindow.print(); 
   }
 
-  function updateText() { 
+//   function updateText() { 
    
-    var iframe = document.getElementById('myIframe').contentWindow;
-      var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
-      var number =document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=number]');
-      var date= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=date]');
-      var time= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=time]');
-      var data = {};
-      for (var x = 0; x < number.length; x++) {
-        data["num"+x] = number[x].value;}
-      for (var y = 0; y < text.length; y++) {
-        data["var"+y] = text[y].value;}
-      for(var z = 0; z < date.length; z++) {
-        var dates = new Date(date[z].value);
-        data["day"+z] = dates.toLocaleDateString('en-US',{day: 'numeric'});
-        data["month"+z] = dates.toLocaleDateString('en-US',{month: 'long'});
-        data["year"+z] = dates.toLocaleDateString('en-US',{year: 'numeric'});
-        data["sup"+z] =  getOrdinalSuffix(dates.toLocaleDateString('en-US',{day: 'numeric'}));
-      }
-        data['time']= convertTime(time[0].value);
-        data["document_type"] = document.getElementById('certificateType').value;
-        console.log(data);
-      iframe.postMessage(data, '*');
+// //     // var iframe = document.getElementById('myIframe').contentWindow;
+// //     console.log(document.getElementById('certificateType').value);
+
+//       var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
+// //       var number =document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=number]');
+// //       var date= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=date]');
+// //       var time= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=time]');
+
+// //       var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+// //       var elementInsideIframe = iframeDocument.getElementById('var1');
+
+// // // Modify the element inside the iframe
+// // elementInsideIframe.innerText = text[0].value;  
+// //       // var data = {};
+// //       // for (var x = 0; x < number.length; x++) {
+// //       //   data["num"+x] = number[x].value;}
+// //       // for (var y = 0; y < text.length; y++) {
+// //       //   data["var"+y] = text[y].value;}
+// //       // for(var z = 0; z < date.length; z++) {
+// //       //   var dates = new Date(date[z].value);
+// //       //   data["day"+z] = dates.toLocaleDateString('en-US',{day: 'numeric'});
+// //       //   data["month"+z] = dates.toLocaleDateString('en-US',{month: 'long'});
+// //       //   data["year"+z] = dates.toLocaleDateString('en-US',{year: 'numeric'});
+// //       //   data["sup"+z] =  getOrdinalSuffix(dates.toLocaleDateString('en-US',{day: 'numeric'}));
+// //       // }
+// //       //   data['time']= 
+// //       //   // data["document_type"] = document.getElementById('certificateType').value;
+// //       // iframe.postMessage(data, '*');
+// var iframe = document.getElementById('myIframe');
+//             var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+//             var previewParagraph = iframeDocument.getElementById('pogi');
+
+//             if (previewParagraph) {
+//                 var mainTextFieldValue = document.getElementById(text[0]).value;
+             
+//                 previewParagraph.innerText = mainTextFieldValue;
+//             }
+//             console.log(text[0].value);
+
   
+//     }
+
+
+
+
+  function updateText() { 
+
+    var iframe = document.getElementById('myIframe');          
+
+
+      var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
+        var number =document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=number]');
+        var date= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=date]');
+        var time= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=time]');
+      
+    
+      console.log(text[0].value);
+      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      var data = {};
+      for (var x = 0; x < text.length; x++) {
+       
+        var Var = iframeDocument.getElementById('var'+x);
+        if (Var) {
+          console.log(text[x].value);
+          Var.innerText = text[x].value;
+      }
     }
+    
+    for (var x = 0; x < number.length; x++) {
+       
+      var Number = iframeDocument.getElementById('num'+x);
+      if (Number) {
+        console.log(number[x].value);
+        Number.innerText = number[x].value;
+    }
+  }
+  
+  for (var x = 0; x < date.length; x++) {
+    var day = iframeDocument.getElementById('day'+x);
+    var month = iframeDocument.getElementById('month'+x);
+    var year = iframeDocument.getElementById('year'+x);
+    var sup = iframeDocument.getElementById('sup'+x);
+
+    var dateValue = new Date(date[x].value);
+
+  
+        if (day) {
+            day.innerText = dateValue.toLocaleDateString('en-US',{day: 'numeric'});
+        }
+        if (month) {
+          month.innerText = dateValue.toLocaleDateString('en-US',{month: 'long'});
+    } 
+        if(year){
+          year.innerText = dateValue.toLocaleDateString('en-US',{year: 'numeric'});
+        }
+        if(sup){
+          sup.innerText = getOrdinalSuffix(dateValue.getDate());
+        }
+  }
+
+  for (var x = 0; x < time.length; x++) {
+       
+    var Time = iframeDocument.getElementById('time'+x);
+    if (Time) {
+      Time.innerText = convertTime(time[x].value);
+
+      
+  }
+}
+
+}
+
+
+
+
+
