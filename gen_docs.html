@@ -259,10 +259,10 @@
                                         </ul>
 
                                         <label for="lotNumber">Lot Number:</label>
-                                        <input type="text" class="form-control" placeholder="Lot No. 123"><br>
+                                        <input type="number" class="form-control" placeholder="Lot No. 123"><br>
 
                                         <label for="lotAreaNumerical">Area Measurement (Numerical Form):</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="number" class="form-control"><br>
 
                                         <!-- <label for="lotAreaWord">Area Measurement (Word Form):</label>
                                         <input type="text" class="form-control"  disabled><br>
@@ -525,12 +525,12 @@
 
                                         <label for="">Age</label>
                                         <input type="number" class="form-control">
-
+                                        
                                         <label for="">Civil Status</label>
-                                        <select name="" class="form-control">
-                                            <option value="">Married</option>
-                                            <option value="">Single</option>
-                                            <option value="">Widow</option>
+                                        <select name=""  id="stats" onchange="updateText()" class="form-control">
+                                            <option value="m">Married</option>
+                                            <option value="s">Single</option>
+                                            <option value="w">Widow</option>
                                         </select>
 
                                         <label for="">Purok:</label>

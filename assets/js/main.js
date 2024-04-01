@@ -125,63 +125,16 @@ var iframeWindow = iframe.contentWindow;
 iframeWindow.print(); 
   }
 
-//   function updateText() { 
-   
-// //     // var iframe = document.getElementById('myIframe').contentWindow;
-// //     console.log(document.getElementById('certificateType').value);
-
-//       var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
-// //       var number =document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=number]');
-// //       var date= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=date]');
-// //       var time= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=time]');
-
-// //       var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-// //       var elementInsideIframe = iframeDocument.getElementById('var1');
-
-// // // Modify the element inside the iframe
-// // elementInsideIframe.innerText = text[0].value;  
-// //       // var data = {};
-// //       // for (var x = 0; x < number.length; x++) {
-// //       //   data["num"+x] = number[x].value;}
-// //       // for (var y = 0; y < text.length; y++) {
-// //       //   data["var"+y] = text[y].value;}
-// //       // for(var z = 0; z < date.length; z++) {
-// //       //   var dates = new Date(date[z].value);
-// //       //   data["day"+z] = dates.toLocaleDateString('en-US',{day: 'numeric'});
-// //       //   data["month"+z] = dates.toLocaleDateString('en-US',{month: 'long'});
-// //       //   data["year"+z] = dates.toLocaleDateString('en-US',{year: 'numeric'});
-// //       //   data["sup"+z] =  getOrdinalSuffix(dates.toLocaleDateString('en-US',{day: 'numeric'}));
-// //       // }
-// //       //   data['time']= 
-// //       //   // data["document_type"] = document.getElementById('certificateType').value;
-// //       // iframe.postMessage(data, '*');
-// var iframe = document.getElementById('myIframe');
-//             var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-//             var previewParagraph = iframeDocument.getElementById('pogi');
-
-//             if (previewParagraph) {
-//                 var mainTextFieldValue = document.getElementById(text[0]).value;
-             
-//                 previewParagraph.innerText = mainTextFieldValue;
-//             }
-//             console.log(text[0].value);
-
-  
-//     }
-
-
-
-
   function updateText() { 
 
     var iframe = document.getElementById('myIframe');          
 
 
-      var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
+        var text = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=text]');
         var number =document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=number]');
         var date= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=date]');
         var time= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=time]');
-      
+        var checkbox = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=checkbox]');
     
       console.log(text[0].value);
       var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
@@ -190,20 +143,28 @@ iframeWindow.print();
        
         var Var = iframeDocument.getElementById('var'+x);
         if (Var) {
-          console.log(text[x].value);
           Var.innerText = text[x].value;
       }
-    }
-    
-    for (var x = 0; x < number.length; x++) {
        
-      var Number = iframeDocument.getElementById('num'+x);
-      if (Number) {
-        console.log(number[x].value);
+        }
+    
+     
+    
+  for (var x = 0; x < number.length; x++) {
+    var Number = iframeDocument.getElementById('num'+x);
+    
+    if (certificateType.value == 'LotOwnership' && x == 1) {
+        let lotnum = iframeDocument.getElementById('lotnum');
+        
+        if (lotnum) {
+            Number.innerText = number[x].value;
+            lotnum.innerText = numberToWords(number[x].value);
+        }
+    } else if (Number) {
         Number.innerText = number[x].value;
     }
-  }
-  
+}
+
   for (var x = 0; x < date.length; x++) {
     var day = iframeDocument.getElementById('day'+x);
     var month = iframeDocument.getElementById('month'+x);
@@ -213,18 +174,13 @@ iframeWindow.print();
     var dateValue = new Date(date[x].value);
 
   
-        if (day) {
+        if (day || month || year || sup) {
             day.innerText = dateValue.toLocaleDateString('en-US',{day: 'numeric'});
-        }
-        if (month) {
           month.innerText = dateValue.toLocaleDateString('en-US',{month: 'long'});
-    } 
-        if(year){
           year.innerText = dateValue.toLocaleDateString('en-US',{year: 'numeric'});
-        }
-        if(sup){
           sup.innerText = getOrdinalSuffix(dateValue.getDate());
         }
+
   }
 
   for (var x = 0; x < time.length; x++) {
@@ -236,6 +192,36 @@ iframeWindow.print();
       
   }
 }
+if(certificateType.value == 'LotOwnership') {
+  for (let y = 0; y < checkbox.length; y++) {
+    var check = iframeDocument.getElementById('check'+y);
+    if (checkbox[y].checked) {
+        check.innerText = '/';
+    } else {
+        check.innerText = ' ';
+    }
+}
+
+}
+
+if (certificateType.value == 'certificate_of_indigency') {
+  var stat = iframeDocument.getElementById('stat');
+  switch ('m') {
+      case 'm':
+          stat.innerHTML = "<u>married</u>, <u>single</u>, widow";
+          break;
+      case 'w':
+          stat.innerHTML = "married, single, <u>widow</u>";
+          break;
+      case 's':
+          stat.innerHTML = "married, <u>single</u>, widow";
+          break;
+      default:
+          stat.innerHTML = "married, single, widow";
+          break;
+  }
+}
+
 
 }
 
