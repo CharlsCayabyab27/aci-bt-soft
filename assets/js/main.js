@@ -174,10 +174,16 @@ iframeWindow.print();
     var dateValue = new Date(date[x].value);
 
   
-        if (day || month || year || sup) {
+        if (day || month || year) {
             day.innerText = dateValue.toLocaleDateString('en-US',{day: 'numeric'});
-          month.innerText = dateValue.toLocaleDateString('en-US',{month: 'long'});
           year.innerText = dateValue.toLocaleDateString('en-US',{year: 'numeric'});
+         
+        }
+        if (month) {
+          month.innerText = dateValue.toLocaleDateString('en-US',{month: 'long'});
+        }
+        if(sup){
+
           sup.innerText = getOrdinalSuffix(dateValue.getDate());
         }
 
@@ -203,12 +209,31 @@ if(certificateType.value == 'LotOwnership') {
 }
 
 }
+console.log(document.getElementById('gg').value);
+
+if(certificateType.value == 'BarangayClearance') {
+
+  
+  // switch () {
+  //   case value:
+      
+  //     break;
+  
+  //   default:
+  //     break;
+  // }
+
+
+}
 
 if (certificateType.value == 'certificate_of_indigency') {
   var stat = iframeDocument.getElementById('stat');
-  switch ('m') {
+  var stato = document.getElementById('civil').value;
+
+  switch (stato) {
       case 'm':
-          stat.innerHTML = "<u>married</u>, <u>single</u>, widow";
+        
+          stat.innerHTML = "<u>married</u>, single, widow";
           break;
       case 'w':
           stat.innerHTML = "married, single, <u>widow</u>";
@@ -217,7 +242,7 @@ if (certificateType.value == 'certificate_of_indigency') {
           stat.innerHTML = "married, <u>single</u>, widow";
           break;
       default:
-          stat.innerHTML = "married, single, widow";
+          stat.innerText = "married, single, widow";
           break;
   }
 }
@@ -225,7 +250,17 @@ if (certificateType.value == 'certificate_of_indigency') {
 
 }
 
+function update() {
+  
+  var iframe = document.getElementById('myIframe');          
+  var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
+  var stat = iframeDocument.getElementById('stats');
+
+  stat.innerText =  document.getElementById('gg').value;
+  console.log(document.getElementById('gg').value);
+  
+}
 
 
 

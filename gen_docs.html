@@ -288,7 +288,7 @@
                                         <input type="text" class="form-control">
 
                                         <label for="businessIssuedDate">Issued Date:</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="date" class="form-control"><br>
                                     </div>
 
                                     <div id="BarangayBusinessPermitrenew">
@@ -305,7 +305,7 @@
                                         <input type="text" class="form-control">
 
                                         <label for="businessIssuedDate">Issued Date:</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="date" class="form-control"><br>
                                     </div>
 
                                     <div id="BarangayCertification">
@@ -436,7 +436,7 @@
                                         <input type="date" class="form-control"><br>
 
                                         <label for="">Duty Officer Full Name</label>
-                                        <input type="date" class="form-control">
+                                        <input type="text" class="form-control">
                                     </div>
 
                                     <div id="transfer">
@@ -491,11 +491,15 @@
                                         <input type="text" class="form-control">
 
                                         <label for="">Birthday:</label>
-                                        <input type="text" class="form-control">
-
+                                        <input type="date" class="form-control">
+                                        <br>
                                         <label for="">Civil Status:</label>
-                                        <input type="text" class="form-control"><br>
-
+                                        <select onchange="update()" name="" id="gg">
+                                            <option value="Maried">Marriied</option>
+                                            <option value="Widow">window</option>
+                                            <option value="Single">singol</option>
+                                        </select>
+                                        <br>
                                         <label for="">Period of Residency:</label>
                                         <input type="number" class="form-control"><br>
 
@@ -527,7 +531,8 @@
                                         <input type="number" class="form-control">
                                         
                                         <label for="">Civil Status</label>
-                                        <select name=""  id="stats" onchange="updateText()" class="form-control">
+                                        <select name=""  id="civil" onchange="updateText()" class="form-control">
+                                            <option value="">Select Civil Status</option>
                                             <option value="m">Married</option>
                                             <option value="s">Single</option>
                                             <option value="w">Widow</option>
