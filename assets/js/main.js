@@ -78,15 +78,9 @@ function numberToWords(number) {
   return words.trim();
 }
 
-  // function commonText(data) {
-  //     names=Object.keys(data);
-  //      value = Object.values(data);
-  //     //  console.log(names);
-  //      for (let i = 0; i < names.length; i++) {
-         
-  //          document.getElementById(names[i]).innerText =  value[i] || '';
-  //          }}//?
-  
+console.log(numberToWords(10000)); // Output: "Ten Thousand"
+
+ 
     function toggleFields() {
       var certificateType = document.getElementById('certificateType').value;
       var forms = document.getElementsByClassName('certificates')[0].children;
