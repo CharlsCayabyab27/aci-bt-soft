@@ -154,7 +154,7 @@ iframeWindow.print();
   for (var x = 0; x < number.length; x++) {
     var Number = iframeDocument.getElementById('num'+x);
     
-    if (certificateType.value == 'LotOwnership' && x == 1) {
+    if (certificateType.value == 'lot_ownership' && x == 1) {
         let lotnum = iframeDocument.getElementById('lotnum');
         
         if (lotnum) {
@@ -199,7 +199,7 @@ iframeWindow.print();
       
   }
 }
-if(certificateType.value == 'LotOwnership') {
+if(certificateType.value == 'lot_ownership') {
   for (let y = 0; y < checkbox.length; y++) {
     var check = iframeDocument.getElementById('check'+y);
     if (checkbox[y].checked) {

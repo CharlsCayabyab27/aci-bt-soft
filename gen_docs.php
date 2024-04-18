@@ -1,11 +1,11 @@
 <?php
-session_start();
+// session_start();
 
-if (!isset($_SESSION['username'])) {
-    header('location: index.php');
-}
+// if (!isset($_SESSION['username'])) {
+//     header('location: index.php');
+// }
 
-require('db.php');
+// require('db.php');
 
 ?>
 
@@ -665,7 +665,7 @@ require('db.php');
 
                                 </div>
                                 <br>
-                                <button onclick="printIframe()">Print</button>
+                              
                             </div>
                         </div>
                     </div>
