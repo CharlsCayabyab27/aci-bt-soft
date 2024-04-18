@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header('location: index.php');
+}
+
+require('db.php');
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -7,7 +18,7 @@
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Para sa Soft Eng
+    ACI-BT | Generate Documents
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
         name='viewport' />
@@ -25,7 +36,7 @@
     <div class="wrapper">
         <div class="sidebar" data-color="" data-active-color="danger">
             <div class="logo" style="background-color: #729ED9;">
-                <a href="home.html" class="simple-text logo-normal">
+                <a href="home.php" class="simple-text logo-normal">
                     <div class="logo-image-big p-3">
                         <img src="./assets/img/cap-log.png">
                     </div>
@@ -34,7 +45,7 @@
             <div class="sidebar-wrapper" style="background-color: #174793;">
                 <ul class="nav">
                     <li class="active">
-                        <a href="home.html">
+                        <a href="home.php">
                             <i class="nc-icon nc-world-2"></i>
                             <p class="text">Home</p>
                         </a>
@@ -80,7 +91,7 @@
                             Tiniguiban</a>
                     </div>
                     <div class="navbar-wrapper">
-                        <a href="home.html"><button type="submit" class="btn btn-round"
+                        <a href="home.php"><button type="submit" class="btn btn-round"
                                 style="width: 100px; background-color: #729ED9;">Back</button></a>
                     </div>
                 </div>
@@ -124,20 +135,20 @@
                 <div class="row ml-3">
                     <select class="p-2" id="certificateType" onchange="toggleFields()" style="cursor: pointer;">
                         <option value="">--select certificates--</option>
-                        <option value="LotOwnership">Lot Ownership</option>
-                        <option value="Indigency">Indigency (AICS)</option>
-                        <option value="certificate_of_indigency">Indigency</option>
-                        <option value="DeathCertificate">Death Certificate</option>
-                        <option value="BarangayBusinessPermitnew">Barangay Business Permit New</option>
-                        <option value="BarangayBusinessPermitrenew">Barangay Business Permit Renew</option>
+                        <option value="lot_ownership">Lot Ownership</option>
+                        <option value="indigency_aics">Indigency (AICS)</option>
+                        <option value="indigency">Indigency</option>
+                        <option value="death_certificate">Death Certificate</option>
+                        <option value="business_permit_new">Barangay Business Permit New</option>
+                        <option value="business_permit_renew">Barangay Business Permit Renew</option>
                         <option value="BarangayCertification">Barangay Certification (First time Job Seeker)</option>
                         <option value="Oathtaking">Oathtaking</option>
-                        <option value="CertificateOfCohabitation">Certificate of Cohabitation</option>
-                        <option value="BarangayClearance">Barangay Clearance</option>
-                        <option value="certificateOfincome">Certificate of Income</option>
-                        <option value="transfer">Certificate of Transfer</option>
+                        <option value="cohabitation">Certificate of Cohabitation</option>
+                        <option value="barangay_clearance">Barangay Clearance</option>
+                        <option value="certificate_of_income">Certificate of Income</option>
+                        <option value="transfer_of_residency">Certificate of Transfer</option>
                         <option value="Employability">Certificate Of Employability</option>
-                        <option value="ComplaintCertificate">Complaint Certificate</option>
+                        <option value="complaint_certificate">Complaint Certificate</option>
 
                     </select>
                 </div>
@@ -146,11 +157,11 @@
                     <div class="col-md-5">
                         <div class="card-user">
                             <div class="card-body forms">
+                                <!-- <button onclick="printIframe()">Print</button> -->
 
                                 <div class="certificates">
 
-                                    <div id="Indigency">
-
+                                    <div id="indigency_aics">
                                         <label for="">First Name:</label>
                                         <input type="text"   class="form-control"><br>
 
@@ -181,7 +192,7 @@
 
                                     </div>
 
-                                    <div id="DeathCertificate">
+                                    <div id="death_certificate">
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control" placeholder="Name of Dead Person"><br>
 
@@ -231,7 +242,7 @@
 
                                     </div>
 
-                                    <div id="LotOwnership">
+                                    <div id="lot_ownership">
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control"><br>
 
@@ -280,7 +291,7 @@
 
                                     </div>
 
-                                    <div id="BarangayBusinessPermitnew">
+                                    <div id="business_permit_new">
                                         <label for="businessName">Business name/ Trade Activity:</label>
                                         <input type="text" class="form-control"><br>
 
@@ -297,7 +308,7 @@
                                         <input type="date" class="form-control"><br>
                                     </div>
 
-                                    <div id="BarangayBusinessPermitrenew">
+                                    <div id="business_permit_renew">
                                         <label for="businessName">Business name/ Trade Activity:</label>
                                         <input type="text" class="form-control"><br>
 
@@ -400,7 +411,7 @@
                                         <input type="text" class="form-control" ><br> -->
                                     </div>
 
-                                    <div id="CertificateOfCohabitation">
+                                    <div id="cohabitation">
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control"><br>
 
@@ -445,7 +456,7 @@
                                         <input type="text" class="form-control">
                                     </div>
 
-                                    <div id="transfer">
+                                    <div id="transfer_of_residency">
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control"><br>
 
@@ -477,7 +488,7 @@
                                         <input type="date" class="form-control">
                                     </div>
 
-                                    <div id="BarangayClearance">
+                                    <div id="barangay_clearance">
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control"><br>
 
@@ -520,7 +531,7 @@
 
                                     </div>
 
-                                    <div id="certificate_of_indigency">
+                                    <div id="indigency">
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control"><br>
 
@@ -606,7 +617,7 @@
                                         <input type="text" class="form-control">
                                     </div>
 
-                                    <div id="ComplaintCertificate">
+                                    <div id="complaint_certificate">
                                         <!--With honorifics-->
                                         <label for="">First Name:</label>
                                         <input type="text" class="form-control"><br>
@@ -653,31 +664,25 @@
                                     </div>
 
                                 </div>
+                                <br>
+                                <button onclick="printIframe()">Print</button>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-7">
                         <div class="card-docs d-flex align-items-center justify-content-center">
                             <div class="docs-container">
-                                <iframe id="myIframe" src="certificates\test.html" width="100%" height="100%"></iframe>
-
+                                <iframe id="myIframe" width="100%" height="100%"></iframe>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <script src="./assets/js/core/jquery.min.js"></script> -->
-    <!-- <script src="./assets/js/core/popper.min.js"></script> -->
-    <!-- <script src="./assets/js/core/bootstrap.min.js"></script> -->
     <script src="./assets/js/plugins/chartjs.min.js"></script>
     <script src="./assets/js/plugins/bootstrap-notify.js"></script>
     <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
     <script src="assets/js/main.js"> </script>
-
 </body>
-
 </html>

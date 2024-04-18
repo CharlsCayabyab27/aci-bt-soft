@@ -21,7 +21,7 @@ Coded by www.creative-tim.com
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Para sa Soft Eng
+    ACI-BT | Login
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
         name='viewport' />
@@ -35,19 +35,8 @@ Coded by www.creative-tim.com
     <link href="./assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<style>
-    /* body {
-        background-image: url(./assets/img/best_cap.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: contain;
-        background-position: -100px;
-    } */
-</style>
-
 <body class="d-flex align-items-center justify-content-center"
     style="height: 100vh; width: 100%; background-color: #F4F3EF;">
-    <!-- <div class="content" style="width: 28%; border-radius: 10px; margin-left: 1000px;"> -->
     <div class="content col-lg-3" style="border-radius: 10px;">
         <div class="card card-user">
             <div class="image">
@@ -59,14 +48,17 @@ Coded by www.creative-tim.com
                     <h5 class="title" style="color: #729ED9;">Welcome to ACI-BT!</h5>
                     <label for="">Login</label>
                 </div>
-                <form action="home.html" style="padding: 0 30px;">
+                <form action="login_process.php" method="POST" style="padding: 0 30px;">
                     <div class="row d-flex flex-column">
                         <div class="col-md-12 px-1">
                             <div class="form-group">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">@</span>
-                                    <input type="text" class="user-input" aria-label="Sizing example input"
-                                        placeholder="Username">
+                                    <input  type="text" 
+                                            class="user-input" 
+                                            aria-label="Sizing example input" 
+                                            placeholder="Username" 
+                                            name="username">
                                 </div>
                             </div>
                         </div>
@@ -102,7 +94,7 @@ Coded by www.creative-tim.com
                                     <span class="input-group-text" id="inputGroup-sizing-default"><i
                                             class="nc-icon nc-lock-circle-open"></i></span>
                                     <input type="password" id="password" class="password-input"
-                                        placeholder="Password" />
+                                        placeholder="Password" name="password"/>
                                     <span class="toggle-password" onclick="togglePasswordVisibility()" style="opacity: 0.6;">🙈</span>
                                 </div>
                             </div>
@@ -110,7 +102,7 @@ Coded by www.creative-tim.com
                     </div>
                     <div class="row">
                         <div class="update ml-auto mr-auto">
-                            <button type="submit" class="btn btn-round"
+                            <button type="submit" class="btn btn-round" name="submit"
                                 style="background-color: #729ED9;">Login</button>
                         </div>
                     </div>
