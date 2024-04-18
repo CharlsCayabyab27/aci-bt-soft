@@ -78,7 +78,6 @@ function numberToWords(number) {
   return words.trim();
 }
 
-console.log(numberToWords(10000)); // Output: "Ten Thousand"
 
  
     function toggleFields() {
@@ -113,6 +112,10 @@ console.log(numberToWords(10000)); // Output: "Ten Thousand"
   }
 
 
+
+
+
+  
   function printIframe() {
     var iframe = document.getElementById('myIframe');
 var iframeWindow = iframe.contentWindow;
@@ -142,9 +145,7 @@ iframeWindow.print();
        
         }
     
-     let koko =iframeDocument.getElementById('days');
-
-     if (koko) koko.innerText = 'tangina'; 
+    
     
   for (var x = 0; x < number.length; x++) {
     var Number = iframeDocument.getElementById('num'+x);
@@ -259,4 +260,20 @@ function update() {
 }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const currentDate = new Date();
 
+    const day = currentDate.getDate();
+    const month = currentDate.getMonth() + 1; 
+    const year = currentDate.getFullYear();
+
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const monthName = monthNames[month];
+  document.getElementById('days').innerText = day;
+  document.getElementById('months').innerText = monthName;
+  document.getElementById('sups').innerText = getOrdinalSuffix(day);
+  document.getElementById('years').innerText =year;
+});
+console.log('tset');
+
+console.log(numberToWords(10000)); // Output: "Ten Thousand"

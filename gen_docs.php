@@ -195,8 +195,7 @@
                                         <label for="">Purpose:</label>
                                         <input type="text" class="form-control" name="purpose">
 
-                                        <label for="">Issued Date:</label>
-                                        <input type="date" class="form-control" name="issued_date">
+                                        
 
                                         <label for="">Duty Officer Full Name:</label>
                                         <input type="text" class="form-control" name="duty_officer_full_name">
@@ -216,8 +215,8 @@
                                         <label for="">Address(Manager / Operator)</label>
                                         <input type="text" class="form-control" name="manager_operator_address">
 
-                                        <label for="businessIssuedDate">Issued Date:</label>
-                                        <input type="date" class="form-control" name="business_issued_date"><br>
+                                        <!-- <label for="businessIssuedDate">Issued Date:</label>
+                                        <input type="date" class="form-control" name="business_issued_date"><br> -->
                                     </div>
 
                                     <div id="business_permit_renew">
@@ -233,8 +232,8 @@
                                         <label for="">Address(Manager / Operator)</label>
                                         <input type="text" class="form-control" name="manager_operator_address">
 
-                                        <label for="businessIssuedDate">Issued Date:</label>
-                                        <input type="date" class="form-control" name="business_issued_date"><br>
+                                        <!-- <label for="businessIssuedDate">Issued Date:</label>
+                                        <input type="date" class="form-control" name="business_issued_date"><br> -->
                                     </div>
 
                                     <div id="certificate_of_employability">
@@ -256,8 +255,8 @@
                                         <label for="">Purok:</label>
                                         <input type="text" class="form-control"><br>
 
-                                        <label for="">Issued Date:</label>
-                                        <input type="date" class="form-control">
+                                        <!-- <label for="">Issued Date:</label>
+                                        <input type="date" class="form-control"> -->
 
                                         <label for="">Duty Officer Full Name:</label>
                                         <input type="text" class="form-control">
@@ -282,8 +281,8 @@
                                         <label for="">Amount (In Numeric Form)</label>
                                         <input type="number" class="form-control"><br>
 
-                                        <label for="">Issued Date:</label>
-                                        <input type="date" class="form-control">
+                                        <!-- <label for="">Issued Date:</label>
+                                        <input type="date" class="form-control"> -->
 
                                         <label for="">Duty Officer Full Name:</label>
                                         <input type="text" class="form-control">
@@ -327,8 +326,8 @@
                                         <label for="periodOfMarriage">Period of marriage:</label>
                                         <input type="number" class="form-control" name="period_of_marriage"><br>
 
-                                        <label for="cohabitationIssuedDate">Issued Date:</label>
-                                        <input type="date" class="form-control" name="issued_date"><br>
+                                        <!-- <label for="cohabitationIssuedDate">Issued Date:</label>
+                                        <input type="date" class="form-control" name="issued_date"><br> -->
 
                                         <label for="">Duty Officer Full Name</label>
                                         <input type="text" class="form-control" name="duty_officer_full_name">
@@ -376,8 +375,8 @@
                                         <label for="">VAWC Official Name</label>
                                         <input type="text" class="form-control">
 
-                                        <label for="">Issued Date:</label>
-                                        <input type="date" class="form-control">
+                                        <!-- <label for="">Issued Date:</label>
+                                        <input type="date" class="form-control"> -->
                                     </div>
 
                                     <div id="death_certificate">
@@ -519,8 +518,7 @@
                                         <!-- <label for="">Purpose:</label>
                                         <input type="text" class="form-control"><br> -->
 
-                                        <label for="">Issued Date:</label>
-                                        <input type="date" class="form-control" name="issued_date">
+                                        
                                     </div>
 
                                     <div id="lot_ownership">
@@ -566,8 +564,7 @@
                                         <label for="lotLocationAddress">Location Address:</label>
                                         <input type="text" class="form-control" name="lot_location_address"><br>
 
-                                        <label for="lotIssuedDate">Issued Date:</label>
-                                        <input type="date" class="form-control" name="lot_issued_date"><br>
+                                        
                                     </div>
 
                                     <div id="Oathtaking"> ⁡⁢⁣⁢<!-- ‍wala sa database table -->⁡⁡
@@ -652,8 +649,7 @@
                                         <label for="">Current Address:</label>
                                         <input type="text" class="form-control" name="current_address"><br>
 
-                                        <label for="">Issued Date:</label>
-                                        <input type="date" class="form-control" name="issued_date">
+                                        
                                     </div>
 
                                 </div>
