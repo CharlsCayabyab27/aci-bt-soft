@@ -110,7 +110,6 @@ console.log(numberToWords(10000)); // Output: "Ten Thousand"
 
       // console.log(doc);
       iframe.src = doc;  
-
   }
 
 
@@ -131,7 +130,7 @@ iframeWindow.print();
         var time= document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=time]');
         var checkbox = document.getElementById(document.getElementById('certificateType').value).querySelectorAll('input[type=checkbox]');
     
-      console.log(text[0].value);
+      // console.log(text[0].value);
       var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
       var data = {};
       for (var x = 0; x < text.length; x++) {
@@ -143,7 +142,9 @@ iframeWindow.print();
        
         }
     
-     
+     let koko =iframeDocument.getElementById('days');
+
+     if (koko) koko.innerText = 'tangina'; 
     
   for (var x = 0; x < number.length; x++) {
     var Number = iframeDocument.getElementById('num'+x);
