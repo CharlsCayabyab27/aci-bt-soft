@@ -104,7 +104,6 @@ function numberToWords(number) {
 
         document.getElementById(certificateType).querySelectorAll('input[type=text], input[type=number]').forEach(function(input) {
         input.setAttribute('oninput', 'updateText()');
-        input.setAttribute('maxLength',50);
         // console.log(input);
         });
         document.getElementById(certificateType).querySelectorAll('input[type=date], input[type=time]').forEach(function(input) {
@@ -112,14 +111,13 @@ function numberToWords(number) {
         });
         document.getElementById(certificateType).querySelectorAll('input[type=checkbox]').forEach(function(input) {
           input.setAttribute('onclick', 'updateText()');
-
           });
 
       // console.log(doc);
       iframe.src = doc;  
 
   }
-///login
+
 
   function printIframe() {
     var iframe = document.getElementById('myIframe');
@@ -140,6 +138,7 @@ iframeWindow.print();
     
       console.log(text[0].value);
       var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      var data = {};
       for (var x = 0; x < text.length; x++) {
        
         var Var = iframeDocument.getElementById('var'+x);
@@ -154,7 +153,7 @@ iframeWindow.print();
   for (var x = 0; x < number.length; x++) {
     var Number = iframeDocument.getElementById('num'+x);
     
-    if (certificateType.value == 'LotOwnership' && x == 1) {
+    if (certificateType.value == 'lot_ownership' && x == 1) {
         let lotnum = iframeDocument.getElementById('lotnum');
         
         if (lotnum) {
@@ -191,7 +190,7 @@ iframeWindow.print();
   }
 
   for (var x = 0; x < time.length; x++) {
-       
+
     var Time = iframeDocument.getElementById('time'+x);
     if (Time) {
       Time.innerText = convertTime(time[x].value);
@@ -199,7 +198,7 @@ iframeWindow.print();
       
   }
 }
-if(certificateType.value == 'LotOwnership') {
+if(certificateType.value == 'lot_ownership') {
   for (let y = 0; y < checkbox.length; y++) {
     var check = iframeDocument.getElementById('check'+y);
     if (checkbox[y].checked) {
@@ -212,7 +211,7 @@ if(certificateType.value == 'LotOwnership') {
 }
 console.log(document.getElementById('gg').value);
 
-if(certificateType.value == 'BarangayClearance') {
+if(certificateType.value == 'barangay_clearance') {
 
   
   // switch () {
@@ -227,7 +226,7 @@ if(certificateType.value == 'BarangayClearance') {
 
 }
 
-if (certificateType.value == 'certificate_of_indigency') {
+if (certificateType.value == 'indigency') {
   var stat = iframeDocument.getElementById('stat');
   var stato = document.getElementById('civil').value;
 
