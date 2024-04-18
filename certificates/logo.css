@@ -1,0 +1,105 @@
+
+
+html, body {
+    width: 21cm !important; 
+    height: 29.7cm !important;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.container {
+    
+    width: 21cm; 
+    height: 29.7cm;
+    margin: 0 auto;
+    padding: 1cm; 
+    box-sizing: border-box;
+    page-break-after: always;
+    position: absolute;
+   /* border: 1px solid black; */
+}
+.content{
+    width: 65% !important;
+}
+b h2 {
+    margin-top: 5px !important;
+}
+.center {
+    text-align: center;
+}
+.brlogo {
+    width: 20%;
+    margin-top: -15px;
+    float: left;
+}
+
+.ctlogo {
+    width: 20%;
+    margin-top: -15px;
+    float: right;
+}
+
+.header {
+        
+    text-align: center;
+    margin-top: 10%
+}
+
+.watermark {
+    margin-left: 5%;
+    margin-top: 20px;
+    width: 90%;
+    opacity: 0.5;
+}
+
+.names {
+    font-size: 11px;
+    position: absolute; 
+    top: 25%; 
+    background-color: rgb(255, 255, 255,0.6);
+}
+
+h2 .center  {
+    margin-top:100px;
+}
+.color {
+    color: #FFC000;
+    font-style: italic;
+}
+
+.purok {
+    font-size: 11px;
+    position: absolute;
+    left: 28%;
+    top: 73.5%
+}
+
+.cp {
+    color: #FFC000;
+    font-size: 15px;
+    position: absolute;
+    left: 24%;
+    top: 18%;
+}
+
+.border{
+    width: 21cm;
+    position: absolute;
+    left: 0;
+    top: -1%;
+}
+.footer-b{
+    width: 21cm;
+    position: absolute;
+    left: 0;
+    bottom:0;
+}
+.family{
+    font-size: larger;
+    font-family: impact;
+    margin-top: 10px;
+}
+.indent {
+        text-indent: 40px;
+    }
