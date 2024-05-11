@@ -134,7 +134,7 @@ if ($result_indigency->num_rows > 0) {
 }
 
 // SQL query to count the number of records in the 'indigency_aics' table
-$sql_indigency_aics = "SELECT COUNT(*) AS count FROM indigency";
+$sql_indigency_aics = "SELECT COUNT(*) AS count FROM indigency_aics";
 $result_indigency_aics = $conn->query($sql_indigency_aics);
 
 // Fetch the count of records from the result
