@@ -605,41 +605,43 @@ Coded by www.creative-tim.com
                   <script>
                     // Data for the bar chart
                     const chartData = {
-                      labels: ['Clearance', 'Business Permit (New)', 'Business Permit (Renew)', 'Certificate of Employability', 'Certificate of Income', 'Cohabitation', 'Complaint Certificate', 'Death Certificate', 'First Time Job Seeker', 'Indigency', 'Indigency (AICS)', 'Lot Ownership', 'Transfer of Residency'],
+                      labels: ['Business Permit (New)', 'Business Permit (Renew)', 'First Time Job Seeker', 'Clearance', 'Cohabitation', 'Certificate of Employability', 'Certificate of Income', 'Complaint Certificate', 'Death Certificate', 'Indigency (AICS)', 'Indigency', 'Lot Ownership', 'Transfer of Residency'],
                       datasets: [{
                         label: 'Number of Issued Certificates',
                         backgroundColor: [
-                          'rgba(255, 25, 25, 0.2)', // Clearance
+
                           'rgba(54, 162, 235, 0.2)', // Business Permit (New)
                           'rgba(255, 206, 86, 0.2)', // Business Permit (Renew)
+                          'rgba(153, 0, 0, 0.2)', // First Time Job Seeker
+                          'rgba(255, 25, 25, 0.2)', // Clearance
+                          'rgba(255, 165, 0, 0.2)', // Cohabitation
                           'rgba(75, 192, 192, 0.2)', // Certificate of Employability
                           'rgba(153, 102, 255, 0.2)', // Certificate of Income
-                          'rgba(255, 165, 0, 0.2)', // Cohabitation
                           'rgba(0, 51, 102, 0.2)', // Complaint Certificate
                           'rgba(0, 128, 0, 0.2)', // Death Certificate
-                          'rgba(153, 0, 0, 0.2)', // First Time Job Seeker
-                          'rgba(77, 0, 77, 0.2)', // Indigency
                           'rgba(16, 16, 16, 0.2)', // Indigency (AICS)
+                          'rgba(77, 0, 77, 0.2)', // Indigency                         
                           'rgba(128, 0, 0, 0.2)', // Lot Ownership
                           'rgba(153, 153, 0, 0.2)' // Transfer of Residency
                         ],
                         borderColor: [
-                          'rgba(255, 0, 0, 1)', // Clearance
+
                           'rgba(54, 162, 235, 1)', // Business Permit (New)
                           'rgba(255, 206, 86, 1)', // Business Permit (Renew)
-                          'rgba(75, 192, 192, 1)', // Certificate of Employability
-                          'rgba(153, 102, 255, 1)', // ertificate of Income
+                          'rgba(153, 0, 0, 1)', // First Time Job Seeker
+                          'rgba(255, 0, 0, 1)', // Clearance
                           'rgba(255, 165, 0, 1)', // Cohabitation
+                          'rgba(75, 192, 192, 1)', // Certificate of Employability
+                          'rgba(153, 102, 255, 1)', // ertificate of Income                         
                           'rgba(0, 51, 102, 1)', // Complaint Certificate
                           'rgba(0, 128, 0,, 1)', // Death Certificate
-                          'rgba(153, 0, 0, 1)', // First Time Job Seeker
-                          'rgba(77, 0, 77, 1)', // Indigency
                           'rgba(16, 16, 16, 1)', // Indigency (AICS)
+                          'rgba(77, 0, 77, 1)', // Indigency
                           'rgba(128, 0, 0, 1)', // Lot Ownership
                           'rgba(153, 153, 0, 1)' // Transfer of Residency
                         ],
                         borderWidth: 1,
-                        data: [Sales_Clearance, Sales_Business_Permit_New, Sales_Business_Permit_Renew, Sales_Certificate_of_Employability, Sales_Certificate_of_Income, Sales_Cohabitation, Sales_Complaint_Certificate, Sales_Death_Certificate, Sales_First_Time_Job_Seeker, Sales_Indigency, Sales_Indigency_AICS, Sales_Lot_Ownership, Sales_Transfer_of_Residency]
+                        data: [Sales_Business_Permit_New, Sales_Business_Permit_Renew, Sales_First_Time_Job_Seeker, Sales_Clearance, Sales_Cohabitation, Sales_Certificate_of_Employability, Sales_Certificate_of_Income, Sales_Complaint_Certificate, Sales_Death_Certificate, Sales_Indigency_AICS, Sales_Indigency, Sales_Lot_Ownership, Sales_Transfer_of_Residency]
                       }]
                     };
 
