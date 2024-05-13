@@ -179,8 +179,8 @@ Coded by www.creative-tim.com
               <div class="row">
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 99, 132);">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Permit (New)</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgba(94, 180, 239);">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Business Permit (New)</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -191,13 +191,13 @@ Coded by www.creative-tim.com
                       </div>
 
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(255, 99, 132);;">
+                      <div class="cert mt-2" style="background-color: rgba(94, 180, 239);">
 
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -205,8 +205,9 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 230, 91)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Permit (Renew)</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 215, 119)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Business Permit (Renew)
+                    </div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -216,12 +217,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(255, 230, 91);">
+                      <div class="cert mt-2" style="background-color: rgb(255, 215, 119);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -230,8 +231,8 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">First Time Job Seeker</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(188, 70, 70)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">First Time Job Seeker</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -241,12 +242,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                      <div class="cert mt-2" style="background-color: rgb(188, 70, 70);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -261,8 +262,8 @@ Coded by www.creative-tim.com
               <div class="row">
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 99, 132)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Barangay Clearance</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 70, 70)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Barangay Clearance</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -272,12 +273,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(255, 99, 132);">
+                      <div class="cert mt-2" style="background-color: rgb(255, 70, 70);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -287,8 +288,8 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 230, 91)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Certificate of Cohabitation
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 183, 50)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Certificate of Cohabitation
                     </div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
@@ -299,12 +300,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(255, 230, 91);">
+                      <div class="cert mt-2" style="background-color: rgb(255, 183, 50);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -312,8 +313,8 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Certificate of Employability
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(110, 204, 204)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Certificate of Employability
                     </div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
@@ -324,12 +325,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                      <div class="cert mt-2" style="background-color: rgb(110, 204, 204);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -346,8 +347,8 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 99, 132)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Certificate of Income</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(183, 147, 255)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Certificate of Income</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -357,12 +358,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(255, 99, 132);">
+                      <div class="cert mt-2" style="background-color: rgb(183, 147, 255);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -370,8 +371,8 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 230, 91)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Complaint Certificate</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(90, 123, 156)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Complaint Certificate</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -381,20 +382,20 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(255, 230, 91);">
+                      <div class="cert mt-2" style="background-color: rgb(90, 123, 156);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Death Certificate</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(76, 166, 76)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Death Certificate</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -404,12 +405,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                      <div class="cert mt-2" style="background-color: rgb(76, 166, 76);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -422,8 +423,8 @@ Coded by www.creative-tim.com
               <div class="row">
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color:  rgb(255, 99, 132)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Indigency (AICS)</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color:  rgb(120, 120, 120)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Indigency (AICS)</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -433,12 +434,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(255, 99, 132);">
+                      <div class="cert mt-2" style="background-color: rgb(120, 120, 120);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -446,8 +447,8 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(255, 230, 91)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Indigency</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(140, 90, 140)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Indigency</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -457,12 +458,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(255, 230, 91);">
+                      <div class="cert mt-2" style="background-color: rgb(140, 90, 140);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -470,8 +471,8 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Lot Ownership</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(173, 90, 90)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Lot Ownership</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -481,12 +482,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                      <div class="cert mt-2" style="background-color: rgb(173, 90, 90);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -500,8 +501,8 @@ Coded by www.creative-tim.com
 
 
                 <div class="col-md">
-                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(54, 162, 235)">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transfer of Residency</div>
+                  <div class="card-body border rounded my-1 shadow-sm" style="background-color: rgb(188, 188, 88)">
+                    <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">Transfer of Residency</div>
 
                     <div class="d-flex align-items-center justify-content-between mb-1"
                       style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
@@ -511,12 +512,12 @@ Coded by www.creative-tim.com
                         </div>
                       </div>
                       <div class="background-border"></div>
-                      <div class="cert mt-2" style="background-color: rgb(54, 162, 235);">
+                      <div class="cert mt-2" style="background-color: rgb(188, 188, 88);">
                         <img src="assets/view_report_icons/icon.png" class="bg-transparent p-1" height="70" alt="">
                       </div>
                     </div>
                     <div class="row px-3">
-                      <div class="col text-white">More Info</div>
+                      <div class="col text-black">More Info</div>
                       <i style="margin-top: 5px; color: white;" class="fas fa-info-circle"></i>
                     </div>
                   </div>
@@ -602,14 +603,41 @@ Coded by www.creative-tim.com
 
                   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                   <script>
-
                     // Data for the bar chart
                     const chartData = {
                       labels: ['Clearance', 'Business Permit (New)', 'Business Permit (Renew)', 'Certificate of Employability', 'Certificate of Income', 'Cohabitation', 'Complaint Certificate', 'Death Certificate', 'First Time Job Seeker', 'Indigency', 'Indigency (AICS)', 'Lot Ownership', 'Transfer of Residency'],
                       datasets: [{
                         label: 'Number of Issued Certificates',
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: [
+                          'rgba(255, 25, 25, 0.2)', // Clearance
+                          'rgba(54, 162, 235, 0.2)', // Business Permit (New)
+                          'rgba(255, 206, 86, 0.2)', // Business Permit (Renew)
+                          'rgba(75, 192, 192, 0.2)', // Certificate of Employability
+                          'rgba(153, 102, 255, 0.2)', // Certificate of Income
+                          'rgba(255, 165, 0, 0.2)', // Cohabitation
+                          'rgba(0, 51, 102, 0.2)', // Complaint Certificate
+                          'rgba(0, 128, 0, 0.2)', // Death Certificate
+                          'rgba(153, 0, 0, 0.2)', // First Time Job Seeker
+                          'rgba(77, 0, 77, 0.2)', // Indigency
+                          'rgba(16, 16, 16, 0.2)', // Indigency (AICS)
+                          'rgba(128, 0, 0, 0.2)', // Lot Ownership
+                          'rgba(153, 153, 0, 0.2)' // Transfer of Residency
+                        ],
+                        borderColor: [
+                          'rgba(255, 0, 0, 1)', // Clearance
+                          'rgba(54, 162, 235, 1)', // Business Permit (New)
+                          'rgba(255, 206, 86, 1)', // Business Permit (Renew)
+                          'rgba(75, 192, 192, 1)', // Certificate of Employability
+                          'rgba(153, 102, 255, 1)', // ertificate of Income
+                          'rgba(255, 165, 0, 1)', // Cohabitation
+                          'rgba(0, 51, 102, 1)', // Complaint Certificate
+                          'rgba(0, 128, 0,, 1)', // Death Certificate
+                          'rgba(153, 0, 0, 1)', // First Time Job Seeker
+                          'rgba(77, 0, 77, 1)', // Indigency
+                          'rgba(16, 16, 16, 1)', // Indigency (AICS)
+                          'rgba(128, 0, 0, 1)', // Lot Ownership
+                          'rgba(153, 153, 0, 1)' // Transfer of Residency
+                        ],
                         borderWidth: 1,
                         data: [Sales_Clearance, Sales_Business_Permit_New, Sales_Business_Permit_Renew, Sales_Certificate_of_Employability, Sales_Certificate_of_Income, Sales_Cohabitation, Sales_Complaint_Certificate, Sales_Death_Certificate, Sales_First_Time_Job_Seeker, Sales_Indigency, Sales_Indigency_AICS, Sales_Lot_Ownership, Sales_Transfer_of_Residency]
                       }]
@@ -659,6 +687,7 @@ Coded by www.creative-tim.com
                 </div>
               </div>
             </div>
+
 
             <div class="carousel-item">
               <div class="row d-flex justify-content-center">
