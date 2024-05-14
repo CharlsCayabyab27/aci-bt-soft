@@ -132,8 +132,9 @@
             </style>
 
             <div class="content">
-                <div class="row ml-3">
-                    <select class="p-2" id="certificateType" onchange="toggleFields()" style="cursor: pointer;">
+                <div class="row ml-3 flex-column ">
+                    <label for="certificateType"> Select Certificate</label>
+                    <select class="p-2 w-25" id="certificateType" onchange="toggleFields()" style="cursor: pointer;">
                         <option value="">--select certificates--</option>
                         <option value="barangay_clearance">Barangay Clearance</option>
                         <option value="business_permit_new">Barangay Business Permit New</option>
@@ -162,43 +163,49 @@
 
                                     <div id="barangay_clearance">
                                         <label for="">First Name:</label>
-                                        <input type="text" class="form-control" name="first_name"><br>
+                                        <input type="text" class="form-control" name="first_name" placeholder="Ex. Juan"><br>
 
-                                        <label for="">Middle Name:</label>
-                                        <input type="text" class="form-control" name="middle_name"><br>
+                                        <label for="">Middle Initial:</label>
+                                        <input type="text" class="form-control" name="middle_name" placeholder="Ex. J"><br>
 
                                         <label for="">Last Name:</label>
-                                        <input type="text" class="form-control" name="last_name"><br>
+                                        <input type="text" class="form-control" name="last_name" placeholder="Ex. Dela Cruz"><br>
 
                                         <label for="">Suffix:</label>
-                                        <input type="text" class="form-control" name="suffix"><br>
+                                        <!-- <input type="text" class="form-control" name="suffix" placeholder=""><br> -->
+                                        <select class="form-control" name="" id="">
+                                            <option value="">Jr</option>
+                                            <option value="">Sr</option>
+                                            <option value="">I</option>
+                                            <option value="">II</option>
+                                            <option value="">III</option>
+                                        </select><br>
 
                                         <label for="">Purok:</label>
-                                        <input type="text" class="form-control" name="purok"><br>
+                                        <input type="text" class="form-control" name="purok" placeholder="Ex. Sandiwa"><br>
 
                                         <label for="">Birthplace:</label>
-                                        <input type="text" class="form-control" name="birthplace">
+                                        <input type="text" class="form-control" name="birthplace" placeholder="Ex. Puerto Princesa City"><br>
 
                                         <label for="">Birthday:</label>
                                         <input type="date" class="form-control" name="birthday">
                                         <br>
                                         <label for="">Civil Status:</label>
-                                        <select onchange="update()" name="" id="gg">
+                                        <select class="form-control" onchange="update()" name="" id="gg">
                                             <option value="Maried">Marriied</option>
                                             <option value="Widow">window</option>
                                             <option value="Single">singol</option>
                                         </select>
                                         <br>
                                         <label for="">Period of Residency:</label>
-                                        <input type="number" class="form-control" name="residency_period"><br>
+                                        <input type="number" class="form-control" name="residency_period" placeholder="Ex. 3 years"><br>
 
                                         <label for="">Purpose:</label>
-                                        <input type="text" class="form-control" name="purpose">
+                                        <!-- <input type="text" class="form-control" name="purpose"> -->
+                                        <input type="text" name="purpose" class="form-control" id="" cols="30" rows="10" placeholder="Ex. Undecided"></input><br>
 
-                                        
-
-                                        <label for="">Duty Officer Full Name:</label>
-                                        <input type="text" class="form-control" name="duty_officer_full_name">
+                                        <!-- <label for="">Duty Officer Full Name:</label>
+                                        <input type="textarea" class="form-control" name="duty_officer_full_name" placeholder="Ex. Franz Miguel"> -->
 
                                     </div>
                                     
@@ -238,19 +245,19 @@
 
                                     <div id="certificate_of_employability">
                                         <label for="">First Name:</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="text" class="form-control" placeholder="Ex. Juan"><br>
 
                                         <label for="">Middle Name:</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="text" class="form-control" placeholder="Ex.Dela"><br>
 
                                         <label for="">Last Name:</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="text" class="form-control" placeholder="Ex. Cruz"><br>
 
                                         <label for="">Suffix:</label>
-                                        <input type="text" class="form-control"><br>
+                                        <input type="text" class="form-control" placeholder="Ex. Jr"><br>
 
                                         <label for="">Age</label>
-                                        <input type="number" class="form-control">
+                                        <input type="number" class="form-control" placeholder="Ex. 20">
 
                                         <label for="">Purok:</label>
                                         <input type="text" class="form-control"><br>
@@ -669,6 +676,24 @@
             </div>
         </div>
     </div>
+    
+    <script>
+    // Select all input elements of type "text"
+    const inputs = document.querySelectorAll('input[type="text"]');
+
+    // Add an event listener for input events to each input element
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            let value = input.value;
+            // Replace all characters that are not letters or spaces
+            value = value.replace(/[^a-zA-Z\s]/g, '');
+            // Limit the length of the value to 50 characters
+            value = value.substring(0, 25);
+            input.value = value;
+        });
+    });
+</script>
+
     <script src="./assets/js/plugins/chartjs.min.js"></script>
     <script src="./assets/js/plugins/bootstrap-notify.js"></script>
     <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>

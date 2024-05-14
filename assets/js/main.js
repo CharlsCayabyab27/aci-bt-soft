@@ -218,11 +218,18 @@ if(certificateType.value == 'barangay_clearance') {
   
   //   default:
   //     break;
-  // }
+  }
 
 
 }
+if (certificateType.value == 'certificate_of_income') {
+var num = iframeDocument.getElementById('intext').value;
 
+if (num ) { 
+
+  num.innerText = 
+
+}
 if (certificateType.value == 'indigency') {
   var stat = iframeDocument.getElementById('stat');
   var stato = document.getElementById('civil').value;
@@ -264,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const currentDate = new Date();
 
     const day = currentDate.getDate();
-    const month = currentDate.getMonth() + 1; 
+    const month = currentDate.getMonth() ; 
     const year = currentDate.getFullYear();
 
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
